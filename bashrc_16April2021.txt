@@ -56,8 +56,6 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-
-
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
@@ -133,50 +131,31 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Cuda general 
-export CMAKE_INCLUDE_PATH=/usr/local/include
-export CMAKE_LIBRARY_PATH=/usr/local/lib
-
-
-# Cuda 9.0
-#export CUDA_HOME=/usr/local/cuda-9.0
-
-# Cuda 11.1
-#export CUDA_HOME=/usr/local/cuda-11.1
-
-# Cuda 11.2
-#export CUDA_HOME=/usr/local/cuda-11.2
-
-# Cuda 10.2
-export CUDA_HOME=/usr/local/cuda-10.2
-
-# Cuda general
-export PATH=$CUDA_HOME/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=$CUDA_HOME/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}                         
+# installing solaar 
+# sudo apt install udev python3-pyudev python3-psutil python3-xlib python3-yaml \ 
+# python3-gi gir1.2-gtk-3.0 python3-dev gir1.2-notify-0.7 \
+# gir1.2-ayatanaappindicator3-0.1 gir1.2-ayatanaappindicator3-0.1 \
+# gir1.2-appindicator3-0.1
+# then do: 
+# You can install this rule by copying, as root, rules.d/42-logitech-unify-permissions.rules from Solaar to /etc/udev/rules.d. You will probably also have to tell udev to reload its rule via sudo udevadm control --reload-rules.
 
 # custome commands and aliases 
 alias hibernate="sudo systemctl hibernate"
 alias home="cd ~"
 alias reboot="sudo systemctl reboot"
-alias mybash="gedit ~/.bashrc" 
+alias mybash="gedit ~/.bashrc &" 
 alias wifireset="sudo service network-manager restart"
 alias ls="ls -aC --color=always"
 alias open='xdg-open'
+alias clr='clear'
+alias sb='source ~/.bashrc'
 # cupsfilter foo.txt > foo.pdf # convert to pdf 
 
-# vspkg
-export DCMAKE_TOOLCHAIN_FILE=/home/bardi/git/vcpkg/scripts/buildsystems/vcpkg.cmake
-
-# c++
-#export CC=g++
-
-# clang
-export PATH=$PATH:"/home/bardi/git/llvm-project/build/bin"
+# for Ccache installation
+export PATH="/usr/lib/ccache:$PATH"
 
 
 
-export PVNET_DOCKER=pvnet_clean:latest
-export PVNET_GIT=$HOME/git/pose_estimation_uncertainty/pvnet  # update
-source $PVNET_GIT/docker/setup_dev.bash
+# end of file
 
 
