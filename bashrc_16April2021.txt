@@ -154,7 +154,20 @@ alias sb='source ~/.bashrc'
 # for Ccache installation
 export PATH="/usr/lib/ccache:$PATH"
 
+# --------------- cmake ---------------
+export CMAKE_INCLUDE_PATH=/usr/local/include
+export CMAKE_LIBRARY_PATH=/usr/local/lib
 
+# --------------- Cuda --------------- 
+# Cuda 10.2
+export CUDA_HOME=/usr/local/cuda-10.2
+# Cuda general 
+export PATH=$CUDA_HOME/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64\
+${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}                         
+
+# Cuda aliases 
+alias nvidiaPD="sudo /usr/bin/nvidia-persistenced --verbose"
 
 # end of file
 
