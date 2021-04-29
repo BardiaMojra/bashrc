@@ -1,4 +1,4 @@
-	# ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -43,7 +43,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-force_color_prompt=yes
+#force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -57,24 +57,20 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]@\h\[\033[00m\] : \[\033[01;34m\]\u \[\033[00m\] \T :\[\033[01;34m\]\w \e[0m\n\$> ' 
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-#    export PS1=`printf "\033[32m$ \033[39m"` # vanila
 fi
 unset color_prompt force_color_prompt
-    #PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    #Two line setup
+
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]@\h\[\033[00m\] : \[\033[01;34m\]\u \[\033[00m\]: \T :\[\033[01;34m\] \w \e[0m\n\$> '    
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
     ;;
 esac
-
-
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -87,9 +83,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-
-
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
@@ -123,40 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# alias eb= 'nano ~/.bashrc'
-# alias sb= 'source ~/.bashrc'
-# alias gs= 'git status'
-# alias gp= 'git pull'
-# alias cw= 'cd ~/catkin_ws'
-# alias cs= 'cd ~/catkin_ws/src'
-# alias cm= 'cd ~/catkin_ws && catkin_make'
-
-# source /opt/ros/melodic/setup.bash
-# source ~/catkin_ws/devel/setup.bash
-# source /home/bardi/git/mask_rcnn_ros/setup.py
-# source ~/git/ros_morefusion/src/morefusion/setup.py
-
-# ip - xv: ROS_IP=192.168.0.104
-# ip - rvl: ROS_IP=
-# Environment Variables 
-export EDITOR='gedit -w'
-export ROS_MASTER_URI=http://192.168.0.104:11311
-export ROS_IP=192.168.0.104
-export GAZEBO_MASTER_URI=http://192.168.0.104:11348
-export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/git/gazebo_tutorials/gazebo_plugin_tutorial/build
-
-# Custom LS Color
-LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:';
-export LS_COLORS
-
-
-alias less='less --RAW-CONTROL-CHARS'
-export LS_OPTS='--color=auto'
-alias ls='ls ${LS_OPTS}'
-
-export TERM=xterm-color
-
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/bardi/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -172,5 +131,51 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH=$PATH:/usr/local/go/bin
+# installing solaar 
+# sudo apt install udev python3-pyudev python3-psutil python3-xlib python3-yaml \ 
+# python3-gi gir1.2-gtk-3.0 python3-dev gir1.2-notify-0.7 \
+# gir1.2-ayatanaappindicator3-0.1 gir1.2-ayatanaappindicator3-0.1 \
+# gir1.2-appindicator3-0.1
+# then do: 
+# You can install this rule by copying, as root, rules.d/42-logitech-unify-permissions.rules from Solaar to /etc/udev/rules.d. You will probably also have to tell udev to reload its rule via sudo udevadm control --reload-rules.
+
+# custom commands and aliases 
+alias hibernate="sudo systemctl hibernate"
+alias home="cd ~"
+alias reboot="sudo systemctl reboot"
+alias mybash="gedit ~/.bashrc &" 
+alias wifireset="sudo service network-manager restart"
+alias ls="ls -AC1 --color=always"
+alias lsd='la -al1 --color=always'
+alias open='xdg-open '
+alias clr='clear'
+alias sb='source ~/.bashrc'
+alias web='google-chrome &'
+alias webnew='google-chrome --new-window &'
+# cupsfilter foo.txt > foo.pdf # convert to pdf 
+
+# for Ccache installation
+export PATH="/usr/lib/ccache:$PATH"
+
+# --------------- cmake ---------------
+export CMAKE_INCLUDE_PATH=/usr/local/include
+export CMAKE_LIBRARY_PATH=/usr/local/lib
+
+# --------------- Cuda --------------- 
+# Cuda aliases 
+alias cudaPD="sudo /usr/bin/nvidia-persistenced --verbose"
+alias nvidDriver="cat /proc/driver/nvidia/version"
+alias cudaAltDis="update-alternatives --display cuda"
+alias cudaAltDisMajor="update-alternatives --display cuda-10"
+alias cudaAltUpdate="sudo update-alternate --config cuda"
+# Cuda 10.2
+export CUDA_HOME=/usr/local/cuda-10.2
+# Cuda general 
+export PATH=$CUDA_HOME/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}                         
+
+
+
+# end of file
+
 
