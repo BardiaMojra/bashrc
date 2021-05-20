@@ -152,6 +152,13 @@ alias clr='clear'
 alias sb='source ~/.bashrc'
 alias web='google-chrome &'
 alias webnew='google-chrome --new-window &'
+alias qcad='/home/bardi/opt/qcadcam-3.26.2-trial-linux-x86_64/qcad &'
+alias gflint='cp ~/git/cheatsheets/scripts/fname_lint.py .' # get fname_lint.py
+alias gget='cp ~/git/cheatsheets/scripts/get.py .' # get get.py
+alias uflint='cp ./fname_lint.py ~/git/cheatsheets/scripts/'
+alias cheat='cd ~/git/cheatsheets/ && ls'
+alias condafromfile='conda env create -f environment.yml'
+alias getbashrc='cp ~/.bashrc .'
 # cupsfilter foo.txt > foo.pdf # convert to pdf 
 
 # for Ccache installation
