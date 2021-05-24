@@ -118,14 +118,14 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/bardi/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/smerx/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/bardi/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/bardi/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/smerx/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/smerx/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/bardi/anaconda3/bin:$PATH"
+        export PATH="/home/smerx/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -155,8 +155,9 @@ alias webnew='google-chrome --new-window &'
 alias qcad='/home/bardi/opt/qcadcam-3.26.2-trial-linux-x86_64/qcad &'
 alias gflint='cp ~/git/cheatsheets/scripts/fname_lint.py .' # get fname_lint.py
 alias gget='cp ~/git/cheatsheets/scripts/get.py .' # get get.py
+alias gconda_envtemp='cp ~/git/cheatsheets/conda_env_temp.yml .' # get conda_env_temp.yml
 alias uflint='cp ./fname_lint.py ~/git/cheatsheets/scripts/'
-alias cheat='cd ~/git/cheatsheets/ && ls'
+alias cheat='cd ~/git/cheatsheets/ & ls'
 alias condafromfile='conda env create -f environment.yml'
 alias getbashrc='cp ~/.bashrc .'
 # cupsfilter foo.txt > foo.pdf # convert to pdf 
