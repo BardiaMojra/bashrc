@@ -157,7 +157,7 @@ alias gflint='cp ~/git/cheatsheets/scripts/fname_lint.py .' # get fname_lint.py
 alias gget='cp ~/git/cheatsheets/scripts/get.py .' # get get.py
 alias gconda_envtemp='cp ~/git/cheatsheets/conda_env_temp.yml .' # get conda_env_temp.yml
 alias uflint='cp ./fname_lint.py ~/git/cheatsheets/scripts/'
-alias cheat='cd ~/git/cheatsheets/ & ls'
+alias cheat='cd ~/git/cheatsheets && ls'
 alias condafromfile='conda env create -f environment.yml'
 alias getbashrc='cp ~/.bashrc .'
 # cupsfilter foo.txt > foo.pdf # convert to pdf 
@@ -182,8 +182,13 @@ export CUDA_HOME=/usr/local/cuda-10.2
 export PATH=$CUDA_HOME/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}                         
 
+# ----->>> ROS setup <<<-----
+source /opt/ros/noetic/setup.bash
+export ROS_HOSTNAME=192.168.1.140
+export ROS_MASTER_URI=http://192.168.1.140:11311
 
 
-# end of file
+
+# EOF
 
 
