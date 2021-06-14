@@ -1,0 +1,1000 @@
+  493  ll
+  494  cd Universal_Robots_Client_Library/
+  495  ls
+  496  mkdir -p build && cd build 
+  497  cmake ..
+  498  conda deactivate 
+  499  conda activate nbv-grasping 
+  500  which catkin_pkg
+  501  sudo apt install python3-catkin-pkg
+  502  sudo apt update
+  503  sudo add-apt-repository -r http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo focal InRelease
+  504  sudo add-apt-repository -r http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo focal 
+  505  sudo add-apt-repository -r http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo 
+  506  sudo apt update
+  507  sudo apt install python-catkin-tools
+  508  sudo apt install python-catkin-pkg
+  509  sudo apt install python3-catkin-pkg
+  510  sudo apt reinstall python3-catkin-pkg
+  511  cd ..
+  512  rm -rd build
+  513  mkdir build && cd build
+  514  cmake ..
+  515  sudo apt-get install cmake python-catkin-pkg python-empy python-nose libgtest-dev
+  516  sudo apt-get install cmake python3-catkin-pkg python3-empy python3-nose libgtest-dev
+  517  sb
+  518  conda activate nbv-grasping 
+  519  cd ..
+  520  rm -rd build
+  521  mkdir build &&  cd build
+  522  cmake ..
+  523  sudo apt install ros-noetic-catking
+  524  sudo apt install ros-noetic-catkin
+  525  echo $ROS_DISTRO 
+  526  which python
+  527  mybash
+  528  conda config --set auto_activate_base false
+  529  sb
+  530  sudo apt install ros-noetic-catkin
+  531  cd ..
+  532  ls
+  533  rm -rd build
+  534  mkdir build && cd build
+  535  cmake ..
+  536  sudo apt install ros-noetic-catkin
+  537  sudo apt install catkin-pkg
+  538  which python 
+  539  sudo apt install python3
+  540  sb
+  541  sudo apt install python3
+  542  which python 
+  543  whereis python 
+  544  mybash
+  545  sb
+  546  which python
+  547  cd ~
+  548  ls
+  549  source /opt/ros/noetic/setup.bash
+  550  sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+  551  sudo apt install python3-rosdep
+  552  sudo rosdep init
+  553  rodep update 
+  554  rosdep update 
+  555  ls
+  556  cd git 
+  557  ls
+  558  solaar
+  559  sudo apt install ros-noetic-catkin
+  560  ls
+  561  cd ..
+  562  ls
+  563  cd Next-Best-View-Grasping/
+  564  ls
+  565  cd catkin_ws/
+  566  ls
+  567  cd Universal_Robots_Client_Library/
+  568  l
+  569  rm -rd build 
+  570  cd build
+  571  mkdir build && cd build 
+  572  cmake ..
+  573  echo $PYTHONPATH 
+  574  which python 
+  575  python
+  576  mybash
+  577  cd Next-Best-View-Grasping/
+  578  cd catkin_ws/
+  579  l
+  580  source devel/setup.bash
+  581  tmux
+  582  scp -P 400 rvladmin@joe.cloud:/home/rvladmin/code/ur5e_setup/* Next-Best-View-Grasping/
+  583  ls
+  584  web
+  585  ssh -p 400 rvladmin@joe.cloud
+  586  cd Next-Best-View-Grasping/
+  587  ls
+  588  cd catkin_ws/
+  589  ls
+  590  roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.1.147
+  591  source devel/setup.bash 
+  592  roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.1.147
+  593  roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.1.147 kinematics_config:=/home/$(whoami)/code/ur5e_setup/rvl_ur5e_calibration.yaml 
+  594  roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.1.147 kinematics_config:=/home/$(whoami)/Next-Best-View-Grasping/rvl_ur5e_calibration.yaml
+  595  poweroff
+  596  cd ls
+  597  ls
+  598  cd Next-Best-View-Grasping/
+  599  ls
+  600  history
+  601  ls
+  602  touch remote_run_history.txt
+  603  code .
+  604  echo 'sudo apt install liburdfdom-tools' >> env_setup.sh 
+  605  sudo apt instal liburdfdom-tools
+  606  sudo apt install liburdfdom-tools
+  607  check_urdf ur5e.urdf
+  608  ls
+  609  cd catkin_ws/src/
+  610  cd fmauch_universal_robot/ur_description/urdf/
+  611  ls
+  612  ls inc/
+  613  check_urdf ur5e.xacro 
+  614  check_urdf <(xacro ur5e.xacro)
+  615  source /home/smerx/anaconda3/bin/activate
+  616  conda activate base
+  617  open .
+  618  git staus
+  619  git status
+  620  git add -A
+  621  git status
+  622  git commit -m 'working on UR5e URDF file. Deleted .git files and folders for subrepos except for .gitignore files.'
+  623  git push 
+  624  ls
+  625  cd catkin_ws/src/fmauch_universal_robot/ur_description/launch/
+  626  ls
+  627  git status
+  628  exit
+  629  rosrun ur5e load_ur5e.launch
+  630  rosrun ur_robot_driver load_ur5e.launch
+  631  roslaunch ur_robot_driver load_ur5e.launch
+  632  roslaunch ur_robot_driver view_ur5e.launch
+  633  roslaunch ur5e_moveit_config moveit_rviz.launch config:=true
+  634  rosrun rviz rviz
+  635  rosrun rviz rviz
+  636  cd Next-Best-View-Grasping/
+  637  l
+  638  cd catkin_ws/
+  639  ls
+  640  source devel/setup.bash 
+  641  rosrun rviz rviz
+  642  ls
+  643  cd src/
+  644  l
+  645  ls
+  646  roslaunch ur5_moveit_config moveit_rviz.launch 
+  647  open .
+  648  roslaunch view_ur5e.launch 
+  649  roslaunch ur5e_moveit_config view_ur5e.launch 
+  650  roslaunch ur5e_moveit_config moveit_rviz.launch 
+  651  cd .
+  652  cd ..
+  653  ls
+  654  source devel/setup.bash 
+  655  roslaunch ur5e_moveit_config moveit_rviz.launch 
+  656  roslaunch  
+  657  roslaunch  xacro moveit_rviz.launch
+  658  roslaunch ur_description moveit_rviz.launch
+  659  rosrun rviz rviz
+  660  roslaunch ur_description ur5e_upload.launch
+  661  poweroff
+  662  web
+  663  sudo apt-get update
+  664  sudo apt install build-essential
+  665  sudo apt install g++
+  666  roslaunch ur5e_moveit_config moveit_rviz.launch config:=true  
+  667  rosrun rviz rviz
+  668  ip address showip address show
+  669  ip address show
+  670  mybash
+  671  rosrun rviz rviz
+  672  cd Next-Best-View-Grasping/
+  673  ls
+  674  cd catkin_ws/
+  675  ls
+  676  source devel/setup.bash 
+  677  roscore
+  678  rosrun rviz rviz
+  679  mybash
+  680  ip address show
+  681  mybash]
+  682  mybash
+  683  sb
+  684  source devel/setup.bash 
+  685  roscore
+  686  cd git 
+  687  ld
+  688  ls
+  689  cd ..
+  690  ls
+  691  cd Next-Best-View-Grasping/
+  692  ls
+  693  git status
+  694  git pull
+  695  git log
+  696  cd git 
+  697  ls
+  698  cd report/
+  699  ls
+  700  git status 
+  701  code .
+  702  git status
+  703  git add -A
+  704  open .
+  705  git status
+  706  git add -A
+  707  git status
+  708  git commit -m "added report for May 28th."
+  709  git push 
+  710  cd ..
+  711  ls
+  712  cd ..
+  713  ls
+  714  cd Next-Best-View-Grasping/
+  715  git fetch 
+  716  get pull
+  717  git pull
+  718  hibernate 
+  719  git status
+  720  cd ..
+  721  ls
+  722  git clone https://github.com/BardiaMojra/resume.git
+  723  ls
+  724  cd resume/
+  725  ls
+  726  open .
+  727  source /home/smerx/anaconda3/bin/activate
+  728  conda activate base
+  729  git status
+  730  git fetch
+  731  get status
+  732  git status
+  733  git log
+  734  git pull
+  735  ls
+  736  ls
+  737  cd git 
+  738  ls
+  739  web
+  740  ls
+  741  cd ..
+  742  ls
+  743  cd Next-Best-View-Grasping/
+  744  ls
+  745  mybash
+  746  sb
+  747  conda init
+  748  mybash
+  749  conda init
+  750  sb
+  751  conda list
+  752  conda env list
+  753  mybash
+  754  source nbv-grasping
+  755  source /home/smerx/anaconda3/envs/nbv-grasping
+  756  conda init
+  757  sb
+  758  conda activate base
+  759  conda activate nvb-grasping 
+  760  conda activate nbv-grasping 
+  761  conda list
+  762  conda install -c conda-forge roboticstoolbox-python
+  763  ls
+  764  code .
+  765  poweroff
+  766  conda activate base
+  767  ls
+  768  which python 
+  769  ls
+  770  cd Next-Best-View-Grasping/
+  771  ls
+  772  echo "# add this >> conda install -c conda-forge roboticstoolbox-python" >> env.yml 
+  773  ls
+  774  which python 
+  775  sudo apt install ros-noetic-moveit
+  776  Failed to fetch http://packages.ros.org/ros/ubuntu/pool/main/r/ros-noetic-chomp-motion-planner/ros-noetic-chomp-motion-planner_1.1.4-1focal.20210519.201716_amd64.deb  404  Not Found [IP: 2600:3404:200:237::2 80]
+  777  sudo apt update
+  778  sudo apt install curl 
+  779  curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+  780  sudo apt update
+  781  sudo apt upgrade
+  782  ls
+  783  cd Next-Best-View-Grasping/
+  784  ls
+  785  git status
+  786  get fetch 
+  787  git fetch
+  788  git status
+  789  git log
+  790  git pull
+  791  git --help
+  792  git diff --help
+  793  git diff
+  794  git log
+  795  gedit env.yml 
+  796  gedit env_.yml 
+  797  gedit env_setup.sh 
+  798  sudo apt install ros-noetic-moveit
+  799  echo 'sudo apt install ros-noetic-moveit -y' >> env_setup.sh 
+  800  gedit 
+  801  ls
+  802  mv env.yml conda_env.yml
+  803  ls
+  804  gedit env_setup.sh 
+  805  sudo apt install ros-noetic-moveit -y
+  806  git status
+  807  git add -A 
+  808  git status
+  809  git commit -m 'added moveit package.'
+  810  git push
+  811  ls
+  812  cd catkin_ws/
+  813  ls
+  814  cd ..
+  815  ls
+  816  rm -rd catkin_ws/
+  817  rm -rf catkin_ws
+  818  ls
+  819  mkdir catkin_ws
+  820  git status
+  821  git add -A
+  822  git status
+  823  git commit -m 'clean start.' 
+  824  git push 
+  825  ls 
+  826  vf catkin_ws/
+  827  cd catkin_ws/
+  828  ls
+  829  mybash
+  830  sourceNoetic
+  831  bs
+  832  sb
+  833  sourceNoetic 
+  834  ls
+  835  mkdir src
+  836  cd src/
+  837  git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
+  838  git clone -b calibration_devel https://github.com/fmauch/universal_robot.git src/fmauch_universal_robot
+  839  git clone -b boost https://github.com/UniversalRobots/Universal_Robots_Client_Library.git src/Universal_Robots_Client_Library
+  840  ls
+  841  git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
+  842  ls
+  843  tree -L 2
+  844  it clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
+  845  git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
+  846  open .
+  847  git status
+  848  sudo apt update 
+  849  sudo apt upgrade 
+  850  $ git clone https://github.com/ros-industrial/ur_msgs.git src/ur_msgs
+  851  cd .. &&  git clone https://github.com/ros-industrial/ur_msgs.git src/ur_msgs
+  852  ls
+  853  cd src/
+  854  ls
+  855  cd ..
+  856  rosdep update
+  857  rosdep install --from-paths src --ignore-src -y
+  858  catkin_make_isolated 
+  859  sudo apt install make 
+  860  cd /home/smerx/Next-Best-View-Grasping/catkin_ws/build_isolated/ur_robot_driver && /home/smerx/Next-Best-View-Grasping/catkin_ws/deve
+  861  cd ..
+  862  ls
+  863  cd src/
+  864  ls
+  865  cd Universal_Robots_Client_Library/
+  866  mkdir build
+  867  ls
+  868  cd build/
+  869  cmake ..
+  870  make
+  871  sudo make install
+  872  cd ..
+  873  rosdep update
+  874  rosdep install --from-paths src --ignore-src -y
+  875  cd..
+  876  cd ..
+  877  rosdep install --from-paths src --ignore-src -y
+  878  catkin_make_isolated
+  879  hibernate
+  880  where roscpp
+  881  which roscpp
+  882  cd ..
+  883  ls
+  884  cat env_setup.sh 
+  885  gedit env_setup.sh 
+  886  sudo apt update 
+  887  sudo apt install ros-roscpp-msgs
+  888  sudo apt-get install -y ros-roscpp-msgs
+  889  sudo apt-get install -y ros-std-msgs
+  890  sudo apt-get install -y ros-roscpp-msgs
+  891  sourceNoetic 
+  892  sudo apt-get install -y ros-roscpp-msgs
+  893  sudo apt update 
+  894  tree -L 3
+  895  rosdep install roscpp
+  896  ls
+  897  cd catkin_ws/
+  898  ls
+  899  tree -L 3
+  900  ls
+  901  cd src/
+  902  ls
+  903  cd ur_msgs/
+  904  ls
+  905  tree -L 3
+  906  cd ..
+  907  l
+  908  cd fmauch_universal_robot/
+  909  cd ..
+  910  ls
+  911  cd Universal_Robots_ROS_Driver/
+  912  ls
+  913  cd ..
+  914  ls
+  915  cd Universal_Robots_Client_Library/
+  916  ls
+  917  rm -rf build/
+  918  which cpp
+  919  cpp --version
+  920  cd ..
+  921  tree -L 3
+  922  tree -L 2
+  923  roscore
+  924  mybash
+  925  ip address show
+  926  ba
+  927  bs
+  928  sb
+  929  roscore
+  930  sourceNoetic 
+  931  printenv | grep ROS
+  932  ls
+  933  cd ..
+  934  rm -rf catkin_ws/
+  935  ls
+  936  mkdir -p catkin_ws/src
+  937  cd catkin_ws/src/
+  938  catkin_init_workspace 
+  939  ls
+  940  cd ..
+  941  catkin_make
+  942  git status
+  943  git add -A 
+  944  git commit -m 'starting over, didnt initialize catkin_ws.'
+  945  git push 
+  946  cd ..
+  947  ls
+  948  cd ..
+  949  ls
+  950  cd git 
+  951  ls
+  952  clr
+  953  mkdir catkin_sandbox
+  954  cd catkin_sandbox/
+  955  touch README.md
+  956  echo '# Catkin Sandbox\n\n\n# EOF' >> README.md 
+  957  cat README.md 
+  958  git init
+  959  ls
+  960  git add README.md 
+  961  ls
+  962  git commit -m 'init commit'
+  963  git remote add origin git@github.com:BardiaMojra/catkin_sandbox.git
+  964  git push -u origin master
+  965  git remote remove origin git@github.com:BardiaMojra/catkin_sandbox.git
+  966  git remote add origin bardia.mojra@gmail.com@github.com:BardiaMojra/catkin_sandbox.git
+  967  git remote remove origin 
+  968  git remote add origin bardia.mojra@gmail.com@github.com:BardiaMojra/catkin_sandbox.git
+  969  git push -u origin master
+  970  git remote remove origin 
+  971  git remote add origin BardiaMojra@gmail.com:BardiaMojra/catkin_sandbox.git
+  972  git push -u origin master
+  973  cd ..
+  974  my bash 
+  975  mybash 
+  976  git clone https://github.com/BardiaMojra/catkin_sandbox.git
+  977  ls
+  978  rm -rf catkin_sandbox/
+  979  git clone https://github.com/BardiaMojra/catkin_sandbox.git
+  980  ls
+  981  cd catkin_sandbox/
+  982  ls
+  983  touch README.md
+  984  echo "# catkin_sandbox" >> README.md
+  985  git add README.md
+  986  git commit -m "first commit"
+  987  git branch -M main
+  988  git remote add origin https://github.com/BardiaMojra/catkin_sandbox.git
+  989  git push -u origin main
+  990  git log
+  991  mkdir catkin_ws
+  992  sudo apt install ros-noetic-ros-tutorials 
+  993  rospack
+  994  rospack find roscpp
+  995  roscd roscpp
+  996  pwd
+  997  rosls
+  998  ls
+  999  cd ~
+ 1000  ls
+ 1001  rosls roscoo
+ 1002  rosls roscpp
+ 1003  roscd roscpp_tutorials/
+ 1004  cd ~/git/
+ 1005  cd catkin_sandbox/
+ 1006  ls
+ 1007  cd catkin_ws/
+ 1008  mkdir src 
+ 1009  cd src/
+ 1010  ls
+ 1011  catkin_init_workspace 
+ 1012  ks
+ 1013  ls
+ 1014  catkin_make
+ 1015  cd .
+ 1016  cd..
+ 1017  cd ..
+ 1018  catkin_make
+ 1019  cd src/
+ 1020  catkin_create_pkg beginner_tutorials std_msgs roscpp
+ 1021  ls
+ 1022  cd beginner_tutorials/
+ 1023  ls
+ 1024  cat CMakeLists.txt 
+ 1025  cd ..
+ 1026  catkin_make
+ 1027  git add -A
+ 1028  git status
+ 1029  ls
+ 1030  cd ,,
+ 1031  ls
+ 1032  clean 
+ 1033  git add -A
+ 1034  git commit -m "test build"
+ 1035  git push 
+ 1036  cd ..
+ 1037  ls
+ 1038  cd ..
+ 1039  cd Next-Best-View-Grasping/
+ 1040  ls
+ 1041  cd catkin_ws/
+ 1042  ls
+ 1043  sourceNoetic 
+ 1044  ls
+ 1045  hibernate
+ 1046  cd ..
+ 1047  cd report/
+ 1048  git log
+ 1049  cd ,,
+ 1050  cd ..
+ 1051  ls
+ 1052  cd resume/
+ 1053  ls
+ 1054  cp Bardia_Mojra_Resume_03-22-2021.docx ~/Desktop/
+ 1055  cd ~/Desktop/
+ 1056  ls
+ 1057  open .
+ 1058  cd ..
+ 1059  ls
+ 1060  cd Next-Best-View-Grasping/
+ 1061  ls
+ 1062  reboot
+ 1063  cd Next-Best-View-Grasping/
+ 1064  sourceNoetic 
+ 1065  ls
+ 1066  tree -L 2 catkin_ws/
+ 1067  rm -rf catkin_ws/
+ 1068  mkdir -p catkin_ws/src && cd catkin_ws
+ 1069  git clone -b boost https://github.com/UniversalRobots/Universal_Robots_Client_Library.git src/Universal_Robots_Client_Library
+ 1070  git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
+ 1071  git clone -b calibration_devel https://github.com/fmauch/universal_robot.git src/fmauch_universal_robot
+ 1072  git clone https://github.com/ros-industrial/ur_msgs.git src/ur_msgs
+ 1073  sudo apt update
+ 1074  rosdep udpate
+ 1075  rosdep update
+ 1076  rosdep install --from-paths src --ignore-src -y
+ 1077  catkin_make_isolated 
+ 1078  hibernate
+ 1079  tree -L 2
+ 1080  tree -L 3
+ 1081  LS
+ 1082  ls
+ 1083  cd src/
+ 1084  ls
+ 1085  tree -L 3
+ 1086  ld
+ 1087  mybash 
+ 1088  open .
+ 1089  l
+ 1090  sb
+ 1091  cleanWS 
+ 1092  ls
+ 1093  cd ..
+ 1094  ls
+ 1095  cd ~
+ 1096  ls
+ 1097  cd Next-Best-View-Grasping/
+ 1098  ls
+ 1099  cd catkin_ws/
+ 1100  ls
+ 1101  cat .catkin_workspace 
+ 1102  cd ..
+ 1103  ls
+ 1104  rm catkin_ws/
+ 1105  rm -d catkin_ws/
+ 1106  rm -df catkin_ws/
+ 1107  rm -rf catkin_ws/
+ 1108  ls
+ 1109  mkdir catkin_ws
+ 1110  cd catkin_ws/
+ 1111  ls
+ 1112  catkin_init_workspace 
+ 1113  ls
+ 1114  mkdir src
+ 1115  sourceNoetic 
+ 1116  ;s
+ 1117  ls
+ 1118  $ git clone -b boost https://github.com/UniversalRobots/Universal_Robots_Client_Library.git src/Universal_Robots_Client_Library
+ 1119  git clone -b boost https://github.com/UniversalRobots/Universal_Robots_Client_Library.git src/Universal_Robots_Client_Library
+ 1120  git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
+ 1121  $ git clone -b calibration_devel https://github.com/fmauch/universal_robot.git src/fmauch_universal_robot
+ 1122  git clone -b calibration_devel https://github.com/fmauch/universal_robot.git src/fmauch_universal_robot
+ 1123  git clone https://github.com/ros-industrial/ur_msgs.git src/ur_msgs
+ 1124  la
+ 1125  tree -L 3
+ 1126  cd src
+ 1127  la
+ 1128  ls
+ 1129  cd Universal_Robots_Client_Library/
+ 1130  ls
+ 1131  cat CMakeLists.txt 
+ 1132  sudo apt update
+ 1133  sudo apt update -qq
+ 1134  rosdep update
+ 1135  rosdep install --from-paths src --ignore-src -y
+ 1136  rospack profile
+ 1137  cd ..
+ 1138  catkin_make_isolated 
+ 1139  ls
+ 1140  cd src/
+ 1141  ls
+ 1142  rm -rf fmauch_universal_robot/ Universal_Robots_Client_Library/ Universal_Robots_ROS_Driver/
+ 1143  la
+ 1144  cd ur_msgs/
+ 1145  ls
+ 1146  cd ..
+ 1147  ls
+ 1148  cd ..
+ 1149  ls
+ 1150  rm -rf build_isolated/ devel_isolated/
+ 1151  ls
+ 1152  catkin_make_isolated 
+ 1153  ls
+ 1154  cd src/
+ 1155  ls
+ 1156  cd ..
+ 1157  git clone -b boost https://github.com/UniversalRobots/Universal_Robots_Client_Library.git src/Universal_Robots_Client_Library
+ 1158  ls
+ 1159  sudo apt update -qq
+ 1160  rosdep update
+ 1161  rosdep install --from-paths src --ignore-src -y
+ 1162  rospack profile
+ 1163  catkin_make_isolated 
+ 1164  git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
+ 1165  rosdep update
+ 1166  rosdep install --from-paths src --ignore-src -y
+ 1167  ls
+ 1168  cd src/
+ 1169  ls
+ 1170  rm -rf Universal_Robots_ROS_Driver/
+ 1171  cd ..
+ 1172  git clone -b calibration_devel https://github.com/fmauch/universal_robot.git src/fmauch_universal_robot
+ 1173  ls
+ 1174  cd src/
+ 1175  ls
+ 1176  rm -rf fmauch_universal_robot/
+ 1177  cd ..
+ 1178  git clone -b calibration_devel https://github.com/fmauch/universal_robot.git src/fmauch_universal_robot
+ 1179  sudo apt update -qq
+ 1180  rosdep update
+ 1181  rosdep install --from-paths src --ignore-src -y
+ 1182  rospack profile 
+ 1183  catkin_make_isolated 
+ 1184  git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
+ 1185  sudo apt update -qq
+ 1186  rosdep update
+ 1187  rosdep install --from-paths src --ignore-src -y
+ 1188  rospack profile 
+ 1189  catkin_make_isolated 
+ 1190  sudo apt-get remove ros-melodic-ur-client-library
+ 1191  sudo apt-get remove ros-
+ 1192  sudo apt-get remove ros-noetic-
+ 1193  sudo apt-get remove ros-noetic-ur-client-library 
+ 1194  rospack profile 
+ 1195  catkin_make_isolated 
+ 1196  tree -L 2
+ 1197  sudo apt-get remove ros-noetic-ur-client-library sudo apt-get remove ros-melodic-ur-client-library
+ 1198  source devel_isolated/setup.bash
+ 1199  ls
+ 1200  git status 
+ 1201  git add -A 
+ 1202  git rm --cached catkin_ws/src/Universal_Robots_Client_Library
+ 1203  cd .. 
+ 1204  cd ..
+ 1205  cd Next-Best-View-Grasping/
+ 1206  git rm --cached catkin_ws/src/Universal_Robots_Client_Library
+ 1207  git log
+ 1208  git rm --cached catkin_ws/src/Universal_Robots_Client_Library
+ 1209  git rm -f --cached catkin_ws/src/Universal_Robots_Client_Library
+ 1210  git rm -f --cached catkin_ws/src/Universal_Robots_ROS_Driver/
+ 1211  git rm -f --cached catkin_ws/src/ur_msgs/
+ 1212  git rm -f --cached catkin_ws/src/fmauch_universal_robot/
+ 1213  git status
+ 1214  ls
+ 1215  tree -L 2
+ 1216  tree -L 3
+ 1217  tree -L 4
+ 1218  git statue
+ 1219  git status
+ 1220  open .
+ 1221  git status
+ 1222  git add -A
+ 1223  git status
+ 1224  git commit -m 'Fixed a build issue caused by default ros client lib package. Documented the fix, I had to run this command "sudo apt-get remove ros-noetic-ur-client-library".'
+ 1225  git fetch 
+ 1226  git log 
+ 1227  git push 
+ 1228  hibernate 
+ 1229  roslaunch moveit_setup_assistant setup_assistant.launch 
+ 1230  mybash
+ 1231  showip
+ 1232  roslaunch moveit_setup_assistant setup_assistant.launch 
+ 1233  sb
+ 1234  roslaunch moveit_setup_assistant setup_assistant.launch 
+ 1235  hibernate 
+ 1236  hibernate
+ 1237  git status
+ 1238  git log
+ 1239  poweroff
+ 1240  hibernate 
+ 1241  ls
+ 1242  cd git/
+ 1243  ls
+ 1244  cd bashrc/
+ 1245  ls
+ 1246  gedit env_setup.sh 
+ 1247  gedit env_setup.sh  &
+ 1248  cd ~/Downloads
+ 1249  wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
+ 1250  sudo dpkg -i ./discord.deb
+ 1251  sudo apt install libgconf-2-4 libappindicator1 libc++1
+ 1252  sudo apt --fix-broken
+ 1253  sudo apt --fix-broken install
+ 1254  discord 
+ 1255  pwd
+ 1256  ls
+ 1257  clr
+ 1258  catkin_make
+ 1259  source /opt/ros/noetic/setup.bash 
+ 1260  mybash
+ 1261  sb
+ 1262  mybash
+ 1263  sb
+ 1264  mybash
+ 1265  ls
+ 1266  mybash
+ 1267  ls
+ 1268  sb
+ 1269  mybash
+ 1270  sb
+ 1271  mybash
+ 1272  sb
+ 1273  catkin_make
+ 1274  sudo catkin_make
+ 1275  rosrun
+ 1276  roscore
+ 1277  showip
+ 1278  mybash
+ 1279  reboot
+ 1280  cd git 
+ 1281  cd report/
+ 1282  ls
+ 1283  code . 
+ 1284  open . 
+ 1285  git status
+ 1286  git add -A
+ 1287  git commit -m "added report for June 5th."
+ 1288  git push 
+ 1289  hibernate
+ 1290  history 
+ 1291  cd ../..
+ 1292  cd Next-Best-View-Grasping/
+ 1293  ls
+ 1294  cd catkin_ws/
+ 1295  ls
+ 1296  mybash 
+ 1297  sb
+ 1298  roslaunch moveit_setup_assistant setup_assistant.launch
+ 1299  cd Next-Best-View-Grasping/
+ 1300  ls
+ 1301  cd catkin_ws/
+ 1302  catkin_make 
+ 1303  cat CMakeLists.txt 
+ 1304  unlink CMakeLists.txt 
+ 1305  ls
+ 1306  catkin_make
+ 1307  catkin_make_isolated 
+ 1308  roslaunch moveit_setup_assistant setup_assistant.launch
+ 1309  sb
+ 1310  roslaunch moveit_setup_assistant setup_assistant.launch
+ 1311  mybash
+ 1312  sb
+ 1313  roslaunch moveit_setup_assistant setup_assistant.launch
+ 1314  poweroff
+ 1315  reboot
+ 1316  sudo snap update
+ 1317  sudo snap help
+ 1318  sudo apt update
+ 1319  sudo apt upgrade
+ 1320  web
+ 1321  poweroff 
+ 1322  web
+ 1323  cd Next-Best-View-Grasping/
+ 1324  ls
+ 1325  git status
+ 1326  git add -A
+ 1327  ls
+ 1328  cat .gitignore 
+ 1329  git status
+ 1330  git commit -m 'added URDF files for UR robots.'
+ 1331  git fetch 
+ 1332  git log
+ 1333  git push 
+ 1334  ls
+ 1335  sb
+ 1336  clr
+ 1337  mybash
+ 1338  roslaunch moveit_setup_assistant setup_assistant.launch 
+ 1339  ls
+ 1340  cd catkin_ws/
+ 1341  ls
+ 1342  cd src/
+ 1343  ls
+ 1344  cd ur_e_description/
+ 1345  ls
+ 1346  cd urdf/
+ 1347  ls
+ 1348  rosrun xacro xacro.py ur5e.urdf.xacro > ur5e.urdf
+ 1349  ls
+ 1350  rosrun xacro xacro.py ur5e_joint_limited_robot.urdf.xacro > ur5e_joint_limited_robot.urdf
+ 1351  rosrun xacro xacro.py ur5e_robot.urdf.xacro > ur5e_robot.urdf
+ 1352  ls
+ 1353  git commit -m "Generated URDF files (moveit accepts .urdf files, not .urdf.xacro) using 'rosrun xacro xacro.py robot.urdf.xacro > robot.urdf' package/command." 
+ 1354  git log 
+ 1355  git push 
+ 1356  roslaunch moveit_setup_assistant setup_assistant.launch 
+ 1357  cd ..
+ 1358  ls
+ 1359  cd ..
+ 1360  ls
+ 1361  source devel_isolated/setup.bash
+ 1362  roslaunch moveit_setup_assistant setup_assistant.launch 
+ 1363  history 
+ 1364  ls
+ 1365  catkin_make_isolated 
+ 1366  roslaunch moveit_setup_assistant setup_assistant.launch 
+ 1367  reboot
+ 1368  git status
+ 1369  git add -A
+ 1370  git status
+ 1371  git commit -m "generated ur5e moveit config files."
+ 1372  git push 
+ 1373  poweroff
+ 1374  cd Next-Best-View-Grasping/
+ 1375  ls
+ 1376  history 
+ 1377  roslaunch moveit_setup_assistant setup_assistant.launch 
+ 1378  source /home/smerx/anaconda3/bin/activate
+ 1379  conda activate opencv_tut
+ 1380  cd git 
+ 1381  cd report/
+ 1382  ls
+ 1383  code .
+ 1384  open 
+ 1385  open . 
+ 1386  git add -A 
+ 1387  git status
+ 1388  git commit -m "added report for June 11th."
+ 1389  git log
+ 1390  git push 
+ 1391  hibernate
+ 1392  roslaunch moveit_tutorials robot_model_and_robot_state_tutorial.launch
+ 1393  git status
+ 1394  cd ..
+ 1395  ls
+ 1396  cd catkin_sandbox/
+ 1397  ls
+ 1398  cd catkin_ws/
+ 1399  ls
+ 1400  sudo apt update
+ 1401  sudo apt upgrade
+ 1402  rosdep update
+ 1403  sleep
+ 1404  sleep --help
+ 1405  hibernate
+ 1406  reboot
+ 1407  cd Next-Best-View-Grasping/
+ 1408  ls
+ 1409  gedit .gitignore 
+ 1410  git status
+ 1411  cd git 
+ 1412  ls
+ 1413  git clone https://github.com/BardiaMojra/moveit_tutorials.git 
+ 1414  ls
+ 1415  cd moveit_tutorials/
+ 1416  mkdir -p ~/ws_moveit/src
+ 1417  rm -rf  ~/ws_moveit/src
+ 1418  mkdir -p ./ws_moveit/src
+ 1419  ls
+ 1420  cd ws_moveit/
+ 1421  cd src/
+ 1422  ls
+ 1423  wstool init . 
+ 1424  wstool merge -t . https://raw.githubusercontent.com/ros-planning/moveit/master/moveit.rosinstall
+ 1425  wstool remove  moveit_tutorials  # this is cloned in the next section
+ 1426  wstool update -t . 
+ 1427  ls
+ 1428  git clone https://github.com/ros-planning/moveit_tutorials.git -b master
+ 1429  git clone https://github.com/ros-planning/panda_moveit_config.git -b noetic-devel
+ 1430  sudo rm -rf ./panda_moveit_config/
+ 1431  git clone https://github.com/ros-planning/panda_moveit_config.git -b melodic-devel
+ 1432  sudo rm -rf ./panda_moveit_config/
+ 1433  git clone https://github.com/ros-planning/panda_moveit_config.git -b noetic-devel
+ 1434  git clone https://github.com/ros-planning/panda_moveit_config.git -b melodic-devel
+ 1435  rosdep install -y --from-paths . --ignore-src --rosdistro noetic
+ 1436  cd ..
+ 1437  catkin config --extend /opt/ros/${ROS_DISTRO} --cmake-args -DCMAKE_BUILD_TYPE=Release
+ 1438  catkin config --extend /opt/ros/noetic --cmake-args -DCMAKE_BUILD_TYPE=Release
+ 1439  cd ~
+ 1440  cd Next-Best-View-Grasping/
+ 1441  ls
+ 1442  cd sr
+ 1443  cd catkin_ws/src/
+ 1444  roslaunch moveit_setup_assistant setup_assistant.launch 
+ 1445  sb
+ 1446  roslaunch moveit_setup_assistant setup_assistant.launch 
+ 1447  cd /opt/ros/noetic/lib/
+ 1448  ls
+ 1449  ls | grep moveit
+ 1450  sudo apt install ros-noetic-moveit
+ 1451  which ros-noetic-moveit
+ 1452  ls | grep moveit
+ 1453  ls
+ 1454  cd ~
+ 1455  ls
+ 1456  cd Next-Best-View-Grasping/
+ 1457  ls
+ 1458  git status
+ 1459  git add -A 
+ 1460  git commit -m "removed urdf files as they are not necessary at all." 
+ 1461  git push 
+ 1462  cd ..
+ 1463  ls
+ 1464  cd git 
+ 1465  ls
+ 1466  cd bashrc/
+ 1467  ls
+ 1468  git status
+ 1469  mybash
+ 1470  getbashrc 
+ 1471  ls
+ 1472  git status
+ 1473  git commit --help
+ 1474  git commit -am 'Saving to repo before OS reinstall.'
+ 1475  git push 
+ 1476  mybash
+ 1477  echo $date
+ 1478  echo $(date)
+ 1479  echo $(date +%F)
+ 1480  sb
+ 1481  gethistory 
+ 1482  ls
+ 1483  mkdir history_archive
+ 1484  mkdir bashrc_archive
+ 1485  ls
+ 1486  rm active.history 
+ 1487  sb
+ 1488  gethistory 
+ 1489  mybash 
+ 1490  gethistory 
+ 1491  sb
+ 1492  gethistory 
