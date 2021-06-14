@@ -160,7 +160,23 @@ alias uflint='cp ./fname_lint.py ~/git/cheatsheets/scripts/'
 alias cheat='cd ~/git/cheatsheets && ls'
 alias condafromfile='conda env create -f environment.yml'
 alias getbashrc='cp ~/.bashrc .'
+alias showip='ip address show'
 # cupsfilter foo.txt > foo.pdf # convert to pdf 
+
+# --------------- git ---------------
+#create a new repository on the command line
+#echo "# catkin_sandbox" >> README.md
+#git init
+#git add README.md
+#git commit -m "first commit"
+#git branch -M main
+#git remote add origin https://github.com/BardiaMojra/catkin_sandbox.git
+#git push -u origin main
+# or push an existing repository from the command line
+#git remote add origin https://github.com/BardiaMojra/catkin_sandbox.git
+#git branch -M main
+#git push -u origin main
+
 
 # for Ccache installation
 export PATH="/usr/lib/ccache:$PATH"
@@ -184,8 +200,15 @@ export LD_LIBRARY_PATH=$CUDA_HOME/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 # ----->>> ROS setup <<<-----
 source /opt/ros/noetic/setup.bash
-export ROS_HOSTNAME=192.168.1.140
-export ROS_MASTER_URI=http://192.168.1.140:11311
+#export ROS_HOSTNAME=192.168.1.140 # RVL
+#export ROS_HOSTNAME=192.168.1.14 # home 
+export ROS_HOSTNAME=10.182.162.104 # UTARI
+export ROS_MASTER_URI=http://${ROS_HOSTNAME}:11311
+# ROS aliases 
+#alias sourceNoetic='source /opt/ros/noetic/setup.bash'
+alias cleanWS='rm -rf build devel install'
+source /home/smerx/Next-Best-View-Grasping/catkin_ws/devel_isolated/setup.bash
+source /home/smerx/Next-Best-View-Grasping/catkin_ws/devel/setup.bash
 
 
 

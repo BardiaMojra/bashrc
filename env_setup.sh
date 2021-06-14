@@ -59,8 +59,10 @@ sudo udevadm control --reload-rules
 sudo apt install solaar 
 
 
-
-
+# download and install latest Discord
+cd ~/Downloads
+wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
+sudo dpkg -i ./discord.deb
 
 # EOF
 
