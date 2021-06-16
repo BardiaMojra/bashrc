@@ -4,18 +4,20 @@ sudo apt update
 sudo apt upgrade -y
 
 # install basics
-sudo apt install wget meld git okular texlive-full -y
+sudo apt install wget meld git okular texlive-full tree -y
 #Turn an existing directory into a git repository
 
-# install Google Chrome form PPA lib
+echo '\n\n --> installing Google Chrome'
+wget -O google-chrome.deb 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb' 
+sudo dpkg -i google-chrome.deb
+rm google-chrome.deb
 
 
-# install MS teams 
-sudo apt install software-properties-common apt-transport-https -y
-wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt update
-sudo apt install code
+echo '\n\n --> installing Conda'
+install latest Conda 
+#wget -O - https://www.anaconda.com/distribution/ 2>/dev/null | sed -ne 's@.*\(https:\/\/repo\.anaconda\.com\/archive\/Anaconda3-.*-Linux-x86_64\.sh\)\">64-Bit (x86) Installer.*@\1@p' | xargs wget
+
+
 
 # set MS fonts 
 sudo add-apt-repository multiverse
@@ -25,24 +27,7 @@ sudo fc-cache -f -v
 #sudo apt install –reinstall ttf-mscorefonts-installer
 
 
-echo "# ----->>> ROS setup <<<-----" >> ~/.bashrc
-# install ROS http://wiki.ros.org/noetic/Installation/Ubuntu 
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-sudo apt install ros-noetic-desktop-full
-#source /opt/ros/noetic/setup.bash # source ROS bash terminal 
-# or 
-echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
-#source ~/.bashrc
-sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
-sudo apt install python3-rosdep # setup ROS dep 
-sudo rosdep init 
-rosdep update
-# i.g. install ROS packages 
-#sudo apt install ros-noetic-slam-gmapping
-# dont forget to add ROS and Gazebo master IP's
-echo 'export ROS_HOSTNAME=localhost' >> ~/.bashrc
-echo 'export ROS_MASTER_URI=http://localhost:11311' >> ~/.bashrc
+
 
 
 # installing solaar 
@@ -60,10 +45,14 @@ sudo apt install solaar
 
 
 # download and install latest Discord
-cd ~/Downloads
+sudo apt install gconf-service gconf-service-backend gconf2-common libappindicator1 \
+                 libatomic1 libc++1 libc++1-10 libc++abi1-10 libdbusmenu-gtk4 libgconf-2-4
 wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
 sudo dpkg -i ./discord.deb
 
+
+cp ~/git/bashrc/.bashrc ~
 # EOF
 
 
+sudo apt-get install ubuntu-restricted-extras
