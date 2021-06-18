@@ -4,8 +4,11 @@ sudo apt update
 sudo apt upgrade -y
 
 # install basics
-sudo apt install wget meld git okular texlive-full tree -y
+sudo apt install wget meld git okular texlive-full tree -y 
 #Turn an existing directory into a git repository
+
+sudo apt-get install ubuntu-restricted-extras -y
+
 
 echo '\n\n --> installing Google Chrome'
 wget -O google-chrome.deb 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb' 
@@ -13,9 +16,6 @@ sudo dpkg -i google-chrome.deb
 rm google-chrome.deb
 
 
-echo '\n\n --> installing Conda'
-install latest Conda 
-#wget -O - https://www.anaconda.com/distribution/ 2>/dev/null | sed -ne 's@.*\(https:\/\/repo\.anaconda\.com\/archive\/Anaconda3-.*-Linux-x86_64\.sh\)\">64-Bit (x86) Installer.*@\1@p' | xargs wget
 
 
 
@@ -23,17 +23,11 @@ install latest Conda
 sudo add-apt-repository multiverse
 sudo apt update && sudo apt install ttf-mscorefonts-installer -y
 sudo fc-cache -f -v
-# reinstall if accidently reject the license agreement 
-#sudo apt install –reinstall ttf-mscorefonts-installer
-
-
-
-
+# reinstall if accidentally reject the license agreement 
+sudo apt install –reinstall ttf-mscorefonts-installer
+sudo apt-get update –fix-missing
 
 # installing solaar 
-conda create -n solaar python=3.7
-conda activate solaar
-conda install -c pdrops pyudev
 sudo apt install -y udev python3-pyudev python3-psutil python3-xlib python3-yaml \
                  python3-gi gir1.2-gtk-3.0 python3-dev gir1.2-notify-0.7 \
                  gir1.2-ayatanaappindicator3-0.1 gir1.2-ayatanaappindicator3-0.1 \
@@ -41,7 +35,9 @@ sudo apt install -y udev python3-pyudev python3-psutil python3-xlib python3-yaml
 cd ~/git && git clone https://github.com/pwr-Solaar/Solaar.git
 sudo cp -v ~/git/Solaar/rules.d/42-logitech-unify-permissions.rules /etc/udev/rules.d/
 sudo udevadm control --reload-rules
-sudo apt install solaar 
+sudo apt install solaar -y
+
+
 
 
 # download and install latest Discord
@@ -52,7 +48,6 @@ sudo dpkg -i ./discord.deb
 
 
 cp ~/git/bashrc/.bashrc ~
+
 # EOF
 
-
-sudo apt-get install ubuntu-restricted-extras
