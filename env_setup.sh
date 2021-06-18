@@ -4,9 +4,9 @@ sudo apt update
 sudo apt upgrade -y
 
 # install basics
-sudo apt install wget meld git okular texlive-full tree -y 
+sudo apt install wget meld git okular curl tree -y 
 #Turn an existing directory into a git repository
-
+# sudo apt install texlive-full	-y
 sudo apt-get install ubuntu-restricted-extras -y
 
 
