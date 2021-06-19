@@ -9,13 +9,20 @@ sudo apt install wget meld git okular curl tree -y
 # sudo apt install texlive-full	-y
 sudo apt-get install ubuntu-restricted-extras -y
 
+git config --global user.email "bardia.mojra@gmail.com"
+git config --global user.name "bardi"
 
-echo '\n\n --> installing Google Chrome'
+
+printf '\n\n --> installing Google Chrome... \n\n'
 wget -O google-chrome.deb 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb' 
 sudo dpkg -i google-chrome.deb
 rm google-chrome.deb
 
 
+
+printf '\n\n --> Setting up device drivers... \n\n'
+sudo ubuntu-drivers devices
+sudo ubuntu-drivers install
 
 
 
