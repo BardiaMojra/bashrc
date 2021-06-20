@@ -3,6 +3,7 @@
 sudo apt update
 sudo apt upgrade -y
 
+printf '\n\n\n --->> Installing ROS melodic...\n'
 
 sudo add-apt-repository multiverse
 
@@ -13,16 +14,14 @@ curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo ap
 
 sudo apt update
 
-sudo apt install ros-melodic-desktop-full
+sudo apt install ros-melodic-desktop-full -y
 
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
-
-
 # install dependencies
-sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
-sudo apt install python-rosdep
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential -y
+sudo apt install python-rosdep -y
 sudo rosdep init
 rosdep update
 
