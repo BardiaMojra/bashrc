@@ -36,3 +36,4 @@ cp ./.bashrc ./../..
 
 # EOF
 
+https://www.displaylink.org/forum/showthread.php?t=67148
