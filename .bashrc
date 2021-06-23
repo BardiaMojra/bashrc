@@ -163,9 +163,89 @@ alias getbashrc='cp ~/.bashrc . && cp .bashrc ./bashrc_archive/$(date +%F).bashr
 alias gethistory='history > .history && cp .history ./history_archive/$(date +%F).history'
 alias showip='ip address show'
 # cupsfilter foo.txt > foo.pdf # convert to pdf 
+# ROS aliases 
+#alias sourceNoetic='source /opt/ros/noetic/setup.bash'
+alias cleanWS='rm -rf build devel install'
 
-# --------------- git ---------------
-#create a new repository on the command line
+# --------------- permissions ---------------
+# Basic syntax:
+#find /path/to/directory -type d -exec chmod 775 {} \; # for directories - d flag
+#find /path/to/directory -type f -exec chmod 775 {} \; # for files - f flag
+# This changes the permissions on the "directory" directory and all 
+# subdirectories within it. 
+# Note, this is usually better than "chmod -R 775 /path/to/directory"
+# 	which changes the permissions on the subdirectories and *all files*
+# Note, here's how permissions work. You specify three decimal digits
+#	which specify the read, write, and execute permissions for yourself,
+#	the group, and others respectively. The way this works is that each
+#	decimal you specify is converted to a three digit binary equivalent
+#	where 1 = true (permission granted) and 0 = false. The 
+# permission bit field flags
+#Decimal		Binary		Permission		Permission meaning
+#7			111			rwx				read, write, and execute
+#6			110			rw-				read and write
+#5			101			r-x				read and execute
+#4			100			r--				read only
+#3			011			-wx				write and execute
+#2			010			-w-				write only
+#1			001			--x				execute only
+#0			000			---				none
+
+
+
+
+# for Ccache installation
+export PATH="/usr/lib/ccache:$PATH"
+
+# --------------- cmake ---------------
+export CMAKE_INCLUDE_PATH=/usr/local/include
+export CMAKE_LIBRARY_PATH=/usr/local/lib
+
+## --------------- Cuda --------------- 
+### Cuda aliases 
+alias cudaPD="sudo /usr/bin/nvidia-persistenced --verbose"
+alias nvidDriver="cat /proc/driver/nvidia/version"
+alias cudaAltDis="update-alternatives --display cuda"
+alias cudaAltDisMajor="update-alternatives --display cuda-10"
+alias cudaAltUpdate="sudo update-alternate --config cuda"
+# Cuda 10.2
+export CUDA_HOME=/usr/local/cuda-10.2
+# Cuda general 
+export PATH=$CUDA_HOME/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}                         
+
+## ----->>> ROS setup <<<-----
+source /opt/ros/melodic/setup.bash
+#source /opt/ros/noetic/setup.bash
+#export ROS_HOSTNAME=192.168.1.140 # RVL
+export ROS_HOSTNAME=192.168.1.14 # home 
+#export ROS_HOSTNAME=10.182.162.104 # UTARI
+export ROS_MASTER_URI=http://${ROS_HOSTNAME}:11311
+
+#source /home/smerx/Next-Best-View-Grasping/catkin_ws/devel_isolated/setup.bash
+#source /home/smerx/Next-Best-View-Grasping/catkin_ws/devel/setup.bash
+
+## --------------- git ---------------
+### ----->>> gToken <<<-----
+export gtoken='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' #QVPose_t01
+
+### ----->>> git cheat sheet <<<-----
+#git config --global user.email 'bardia.mojra@gmail.com'
+#git config --global user.name 'bardi'
+#git config --global user.signingkey ${gtoken}
+#git config --global --unset user.signingkey # use --unset to erase 
+#git config --get remote.origin.url # get current login username URL
+
+#git config --global credential.username 'BardiaMojra' # ----->> personal
+#git config --global credential.email 'bardia.mojra@gmail.com'
+
+#git config --global credential.username 'uta-bardia' # ----->> UTARI
+#git config --global credential.username 'bardia.mojra@uta.edu'
+
+
+
+
+### create a new repository on the command line
 #echo "# catkin_sandbox" >> README.md
 #git init
 #git add README.md
@@ -179,40 +259,9 @@ alias showip='ip address show'
 #git push -u origin main
 
 
-# for Ccache installation
-export PATH="/usr/lib/ccache:$PATH"
+#experimental 
+#export PS1="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h\[$WHITE\]: [\[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" - \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]] \$ \[$RESET\]"
 
-# --------------- cmake ---------------
-export CMAKE_INCLUDE_PATH=/usr/local/include
-export CMAKE_LIBRARY_PATH=/usr/local/lib
 
-# --------------- Cuda --------------- 
-# Cuda aliases 
-alias cudaPD="sudo /usr/bin/nvidia-persistenced --verbose"
-alias nvidDriver="cat /proc/driver/nvidia/version"
-alias cudaAltDis="update-alternatives --display cuda"
-alias cudaAltDisMajor="update-alternatives --display cuda-10"
-alias cudaAltUpdate="sudo update-alternate --config cuda"
-# Cuda 10.2
-export CUDA_HOME=/usr/local/cuda-10.2
-# Cuda general 
-export PATH=$CUDA_HOME/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=$CUDA_HOME/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}                         
-
-# ----->>> ROS setup <<<-----
-source /opt/ros/melodic/setup.bash
-#source /opt/ros/noetic/setup.bash
-#export ROS_HOSTNAME=192.168.1.140 # RVL
-export ROS_HOSTNAME=192.168.1.14 # home 
-#export ROS_HOSTNAME=10.182.162.104 # UTARI
-export ROS_MASTER_URI=http://${ROS_HOSTNAME}:11311
-# ROS aliases 
-#alias sourceNoetic='source /opt/ros/noetic/setup.bash'
-alias cleanWS='rm -rf build devel install'
-#source /home/smerx/Next-Best-View-Grasping/catkin_ws/devel_isolated/setup.bash
-#source /home/smerx/Next-Best-View-Grasping/catkin_ws/devel/setup.bash
-
-# ----->>> Git Token <<<-----
-export gtoken='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' #QVPose_t01
 
 # EOF
