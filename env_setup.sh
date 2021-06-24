@@ -13,11 +13,9 @@ printf '\n\n\n --->> Setting up device drivers... \n'
 sudo ubuntu-drivers devices
 sudo ubuntu-drivers install
 
+## set git user info
 git config --global user.email "bardia.mojra@gmail.com"
 git config --global user.name "bardi"
-
-sudo apt update 
-sudo apt upgrade -y
 
 printf '\n\n\n --->> installing Google Chrome... \n'
 wget -O google-chrome.deb 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb' 
@@ -36,4 +34,3 @@ cp ./.bashrc ./../..
 
 # EOF
 
-https://www.displaylink.org/forum/showthread.php?t=67148
