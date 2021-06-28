@@ -9,7 +9,11 @@ cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf
 
 sudo update-initramfs -u
 
-printf '\n\n ---->>> Reboot system for updates to take effect...\n'
+printf '\n\n'
+printf ' ---->>> now set PRIME mode to performance\n'
+printf '    \--->>> run nvidia-settings \n'
+printf '    \--->>> set PRIME mode to Performance \n'
+printf '    \--->>> reboot...\n'
 
 
 # EOF
