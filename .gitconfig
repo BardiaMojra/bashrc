@@ -1,6 +1,8 @@
-[user]
-	email = bardia.mojra@gmail.com
-	name = bardi
 [credential]
+	helper = store
 	username = BardiaMojra
-	email = bardia.mojra@uta.edu
+[user]
+	name = bardi
+	email = bardia.mojra@gmail.com
+[color]
+	ui = true
