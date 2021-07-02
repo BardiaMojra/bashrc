@@ -1,21 +1,28 @@
 #!/bin/bash
 
+
 sudo apt update
-sudo apt upgrade -y
 
-# install basics
-sudo apt install wget meld git okular curl tree -y
-#Turn an existing directory into a git repository
-# sudo apt install texlive-full	-y
-sudo apt-get install ubuntu-restricted-extras -y
-
-printf '\n\n\n --->> Setting up device drivers... \n'
+printf '\n\n\n --->> setting up device drivers... \n'
 sudo ubuntu-drivers devices
 sudo ubuntu-drivers autoinstall
-sudo
 
-git config --global user.email "bardia.mojra@gmail.com"
-git config --global user.name "bardi"
+printf '\n\n\n --->> upgrade packages... \n'
+sudo apt upgrade -y
+
+printf '\n\n\n --->> install basics... \n'
+sudo apt install wget meld git okular curl tree tmux -y
+sudo apt-get install ubuntu-restricted-extras -y
+sudo apt install
+
+printf '\n\n\n --->> install texlive? \n'
+sudo apt install texlive-full
+
+
+
+#git config --global user.email "bardia.mojra@gmail.com"
+#git config --global user.name "bardi"
+#git init #Turn an existing directory into a git repository
 
 sudo apt update
 sudo apt upgrade -y
@@ -34,7 +41,6 @@ sudo apt install --reinstall ttf-mscorefonts-installer
 sudo apt-get update --fix-missing
 
 cp ./.bashrc ./../..
+#https://www.displaylink.org/forum/showthread.php?t=67148
 
 # EOF
-
-https://www.displaylink.org/forum/showthread.php?t=67148
