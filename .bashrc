@@ -171,11 +171,11 @@ alias gconda_envtemp='cp ~/git/cheatsheets/conda_env_temp.yml .' # get conda_env
 alias uflint='cp ./fname_lint.py ~/git/cheatsheets/scripts/'
 alias cheat='cd ~/git/cheatsheets && ls'
 alias condafromfile='conda env create -f environment.yml'
-alias getbashrc='cp ~/.bashrc . && cp .bashrc ./bashrc_archive/$(date +%F).bashrc'
-alias gethistory='history > .history && cp .history ./history_archive/$(date +%F).history'
+alias logbash='cp ~/.bashrc ~/git/bashrc/.bashrc && cp ~/.bashrc ~/git/bashrc/bashrc_archive/$(date +%F).bashrc && cd ~/git/bashrc/ && git status'
+alias loghistory='history > ~/git/bashrc/.history && cp  ~/git/bashrc/.history  ~/git/bashrc/history_archive/$(date +%F).history'
 alias showip='ip address show'
-# cupsfilter foo.txt > foo.pdf # convert to pdf 
-# ROS aliases 
+# cupsfilter foo.txt > foo.pdf # convert to pdf
+# ROS aliases
 #alias sourceNoetic='source /opt/ros/noetic/setup.bash'
 alias cleanWS='rm -rf build devel install'
 

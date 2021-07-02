@@ -6,3 +6,7 @@
 	email = bardia.mojra@gmail.com
 [color]
 	ui = true
+[diff]
+	tool = meld
+[alias]
+	dt = difftool -d
