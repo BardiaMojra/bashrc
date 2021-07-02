@@ -64,7 +64,8 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
-
+#experimental  ---> needs $(parse_git_branch)
+#export PS1="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h\[$WHITE\]: [\[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" - \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]] \$ \[$RESET\]"
 if [ "$color_prompt" = yes ]; then
     export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[33m\]$(parse_git_branch)\[\033[00m\]\$ '
     export -n PS1 # unexport PS1 so sub-processes will not inherit it
@@ -155,7 +156,7 @@ alias reboot="sudo systemctl reboot"
 alias mybash="gedit ~/.bashrc &" 
 alias wifireset="sudo service network-manager restart"
 alias ls="ls -AC1 --color=always"
-alias lsd='la -al1 --color=always'
+alias lsd='ls -al1 --color=always'
 alias open='xdg-open '
 alias clr='clear'
 alias sb='source ~/.bashrc'
@@ -275,6 +276,10 @@ export gtoken_p='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' #Cyber-01 - personal
 #experimental  ---> needs $(parse_git_branch)
 #export PS1="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h\[$WHITE\]: [\[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" - \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]] \$ \[$RESET\]"
 
+
+
+### find and locate examples <<<-----------
+#find /usr/ -iname "*hdf5.h*"
 
 
 # EOF
