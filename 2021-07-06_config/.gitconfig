@@ -1,0 +1,17 @@
+[credential]
+	helper = store
+[credential "https://github.com"]
+  useHttpPath = true
+[user]
+	name = bardi
+	email = bardia.mojra@gmail.com
+[color]
+	ui = true
+	diff=auto
+  status=auto
+  branch=auto
+[diff]
+	tool = meld
+[alias]
+	dt = difftool -d
+
