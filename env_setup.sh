@@ -7,6 +7,11 @@ printf '\n\n\n --->> setting up device drivers... \n'
 sudo ubuntu-drivers devices
 sudo ubuntu-drivers autoinstall
 
+printf '\n\n\n --->> enable A2DP (High Fidelity) bluetooth audio... \n'
+sudo apt install pulseaudio pulseaudio-utils pavucontrol pulseaudio-module-bluetooth
+sudo cp ./audio.conf /etc/bluetooth/audio.conf
+sudo service bluetooth restart
+
 printf '\n\n\n --->> upgrade packages... \n'
 sudo apt upgrade -y
 
