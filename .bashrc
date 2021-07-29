@@ -169,8 +169,16 @@ alias uflint='cp ./fname_lint.py ~/git/cheatsheets/scripts/'
 alias cheat='cd ~/git/cheatsheets && ls'
 alias condafromfile='conda env create -f environment.yml'
 alias gconda_envtemp='cp ~/git/cheatsheets/conda_env_temp.yml .' # get conda_env_temp.yml
-alias logbash='cp ~/.bashrc ~/git/bashrc/.bashrc && cp ~/.bashrc ~/git/bashrc/bashrc_archive/$(date +%F).bashrc && cd ~/git/bashrc/ && git status'
-alias loghistory='history > ~/git/bashrc/.history && cp  ~/git/bashrc/.history  ~/git/bashrc/history_archive/$(date +%F).history'
+alias logbash='cp ~/.bashrc ~/git/bashrc/.bashrc &&\
+cp ~/.bashrc ~/git/bashrc/bashrc_archive/$(date +%F).bashrc &&\
+cd ~/git/bashrc/ && git status'
+alias loghistory='history > ~/git/bashrc/.history &&\
+cp  ~/git/bashrc/.history  ~/git/bashrc/history_archive/$(date +%F).history &&\
+git status'
+alias loggitconfig='cd ~/git/bashrc && cp ~/.gitconfig . && cp ~/.git-credentials . &&\
+cp ./.gitconfig ~/git/bashrc/git_archive/$(date +%F).gitconfig &&\
+cp ./.git-credentials ~/git/bashrc/git_archive/$(date +%F).git-credentials &&\
+git status' 
 alias showip='ip address show'
 alias gitexpress="git add -A && git commit -m 'Updated with git-express on $(date +%F).' && git push"
 # cupsfilter foo.txt > foo.pdf # convert to pdf
