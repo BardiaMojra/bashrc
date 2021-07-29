@@ -141,19 +141,19 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# installing solaar
-# sudo apt install udev python3-pyudev python3-psutil python3-xlib python3-yaml \
+# installing solaar 
+# sudo apt install udev python3-pyudev python3-psutil python3-xlib python3-yaml \ 
 # python3-gi gir1.2-gtk-3.0 python3-dev gir1.2-notify-0.7 \
 # gir1.2-ayatanaappindicator3-0.1 gir1.2-ayatanaappindicator3-0.1 \
 # gir1.2-appindicator3-0.1
-# then do:
+# then do: 
 # You can install this rule by copying, as root, rules.d/42-logitech-unify-permissions.rules from Solaar to /etc/udev/rules.d. You will probably also have to tell udev to reload its rule via sudo udevadm control --reload-rules.
 
-# custom commands and aliases
+# custom commands and aliases 
 alias hibernate="sudo systemctl hibernate"
 alias reboot="sudo systemctl reboot"
-alias mybash="gedit ~/.bashrc &"
-alias catbash="cat ~/.bashrc "
+alias mybash="gedit ~/.bashrc &" 
+alias catbash="cat ~/.bashrc " 
 alias wifireset="sudo service network-manager restart"
 alias ls="ls -AC1p --color=always"
 alias lsd='ls -Ahl1p --color=always'
@@ -177,7 +177,6 @@ alias gitexpress="git add -A && git commit -m 'Updated with git-express on $(dat
 # ROS aliases
 #alias sourceNoetic='source /opt/ros/noetic/setup.bash'
 alias cleanWS='rm -rf build devel install'
-
 alias soundon='pacmd set-card-profile device_name a2dp_sink'
 alias showCards='pacmd list-cards'
 
@@ -193,15 +192,15 @@ alias showCards='pacmd list-cards'
 # Basic syntax:
 #find /path/to/directory -type d -exec chmod 775 {} \; # for directories - d flag
 #find /path/to/directory -type f -exec chmod 775 {} \; # for files - f flag
-# This changes the permissions on the "directory" directory and all
-# subdirectories within it.
+# This changes the permissions on the "directory" directory and all 
+# subdirectories within it. 
 # Note, this is usually better than "chmod -R 775 /path/to/directory"
 # 	which changes the permissions on the subdirectories and *all files*
 # Note, here's how permissions work. You specify three decimal digits
 #	which specify the read, write, and execute permissions for yourself,
 #	the group, and others respectively. The way this works is that each
 #	decimal you specify is converted to a three digit binary equivalent
-#	where 1 = true (permission granted) and 0 = false. The
+#	where 1 = true (permission granted) and 0 = false. The 
 # permission bit field flags
 #Decimal		Binary		Permission		Permission meaning
 #7			111			rwx				read, write, and execute
@@ -217,14 +216,14 @@ alias showCards='pacmd list-cards'
 
 
 # for Ccache installation
-export PATH="/usr/lib/ccache:$PATH"
+#export PATH="/usr/lib/ccache:$PATH"
 
 # --------------- cmake ---------------
-export CMAKE_INCLUDE_PATH=/usr/local/include
-export CMAKE_LIBRARY_PATH=/usr/local/lib
+#export CMAKE_INCLUDE_PATH=/usr/local/include
+#export CMAKE_LIBRARY_PATH=/usr/local/lib
 
-## --------------- Cuda ---------------
-### Cuda aliases
+## --------------- Cuda --------------- 
+### Cuda aliases 
 #alias cudaPD="sudo /usr/bin/nvidia-persistenced --verbose"
 #alias nvidDriver="cat /proc/driver/nvidia/version"
 #alias cudaAltDis="update-alternatives --display cuda"
@@ -232,16 +231,15 @@ export CMAKE_LIBRARY_PATH=/usr/local/lib
 #alias cudaAltUpdate="sudo update-alternate --config cuda"
 # Cuda 10.2
 #export CUDA_HOME=/usr/local/cuda-10.2
-# Cuda general
+# Cuda general 
 #export PATH=$CUDA_HOME/bin${PATH:+:${PATH}}
-#export LD_LIBRARY_PATH=$CUDA_HOME/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
+#export LD_LIBRARY_PATH=$CUDA_HOME/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}                         
 
 ## ----->>> ROS setup <<<-----
 #source /opt/ros/melodic/setup.bash
 #source /opt/ros/noetic/setup.bash
-export ROS_HOSTNAME=192.168.1.140 # RVL
-#export ROS_HOSTNAME=192.168.1.14 # home
+#export ROS_HOSTNAME=192.168.1.140 # RVL
+export ROS_HOSTNAME=192.168.1.14 # home 
 #export ROS_HOSTNAME=10.182.162.104 # UTARI
 export ROS_MASTER_URI=http://${ROS_HOSTNAME}:11311
 
@@ -257,7 +255,7 @@ export gtoken_p='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' #Cyber-01 - personal
 #git config --global user.email 'bardia.mojra@gmail.com'
 #git config --global user.name 'bardi'
 #git config --global user.signingkey ${gtoken}
-#git config --global --unset user.signingkey # use --unset to erase
+#git config --global --unset user.signingkey # use --unset to erase 
 #git config --get remote.origin.url # get current login username URL
 
 #git config --global credential.username 'BardiaMojra' # ----->> personal
