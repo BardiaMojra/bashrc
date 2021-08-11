@@ -4,6 +4,9 @@
 sudo apt update
 
 printf '\n\n\n --->> setting up device drivers... \n'
+sudo apt-get purge xserver-xorg-video-intel
+sudo apt-get purge 'nvidia*'
+sudo apt auto remove
 sudo ubuntu-drivers devices
 sudo ubuntu-drivers autoinstall
 
