@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt upgrade -y
+sudo apt clean && sudo apt update && sudo apt upgrade -y
 printf '\n\n\n --->> setting up adobe reader ---------->> WARNING not recommended... \n'
 
 #printf '\n\n\n --->> setting up adobe reader... \n'

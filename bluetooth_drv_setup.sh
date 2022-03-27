@@ -7,7 +7,7 @@ function pause(){
 }
 
 
-
+sudo apt clean && sudo apt update && sudo apt upgrade -y
 printf '\n\n\n ---->>> installing latest bluetooth driver...'
 sudo add-apt-repository ppa:blaze/rtbth-dkms
 sudo apt update

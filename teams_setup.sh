@@ -1,7 +1,6 @@
  #!/bin/bash
 
-sudo apt update
-sudo apt upgrade -y
+sudo apt clean && sudo apt update && sudo apt upgrade -y
 
 # install MS teams
 printf '\n\n installing latest ms teams...\n\n'

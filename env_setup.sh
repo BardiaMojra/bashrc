@@ -6,7 +6,7 @@ sudo apt update
 printf '\n\n\n --->> setting up device drivers... \n'
 sudo apt-get purge xserver-xorg-video-intel
 sudo apt-get purge 'nvidia*'
-sudo apt auto remove
+sudo apt autoremove
 sudo ubuntu-drivers devices
 sudo ubuntu-drivers autoinstall
 
@@ -25,8 +25,6 @@ sudo apt install
 
 printf '\n\n\n --->> install texlive? \n'
 sudo apt install texlive-full
-
-
 
 #git config --global user.email "bardia.mojra@gmail.com"
 #git config --global user.name "bardi"
