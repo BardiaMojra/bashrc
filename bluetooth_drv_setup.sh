@@ -6,7 +6,6 @@ function pause(){
  echo ""
 }
 
-
 sudo apt clean && sudo apt update && sudo apt upgrade -y
 printf '\n\n\n ---->>> installing latest bluetooth driver...'
 sudo add-apt-repository ppa:blaze/rtbth-dkms
@@ -22,7 +21,6 @@ sudo gedit /etc/rc.local
 
 sudo chmod 777 /etc/rc.local
 sudo apt install blueman
-
 
 
 printf '\n\n'

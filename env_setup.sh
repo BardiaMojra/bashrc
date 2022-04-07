@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-sudo apt update
+sudo apt clean && sudo apt update && sudo apt upgrade -y
 
 printf '\n\n\n --->> setting up device drivers... \n'
 sudo apt-get purge xserver-xorg-video-intel
