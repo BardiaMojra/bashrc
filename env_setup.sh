@@ -1,13 +1,25 @@
 #!/bin/bash
 
-sudo apt clean && sudo apt update && sudo apt upgrade -y
+sudo apt clean && sudo apt update #&& sudo apt upgrade -y
 
 printf '\n\n\n --->> setting up device drivers... \n'
 sudo apt-get purge xserver-xorg-video-intel
 sudo apt-get purge 'nvidia*'
 sudo apt autoremove
+printf '\n\n\n ---->>> Blacklist nouveau (xServer) graphics driver...'
+sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+printf '\n ---->>> Confirm the new modprobe config file...'
+cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+sudo update-initramfs -u
+printf '\n\n\n --->> install recommended Nvidia driver... \n'
 sudo ubuntu-drivers devices
 sudo ubuntu-drivers autoinstall
+printf '\n\n'
+printf ' ---->>> now set PRIME mode to performance\n'
+printf '    \--->>> run nvidia-settings \n'
+printf '    \--->>> set PRIME mode to Performance \n'
+printf '    \--->>> reboot...\n'
 
 
 printf '\n\n\n --->> install Solaar... \n'
@@ -37,10 +49,10 @@ sudo apt install texlive-full
 sudo apt update
 sudo apt upgrade -y
 
-printf '\n\n\n --->> installing Google Chrome... \n'
-wget -O google-chrome.deb 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
-sudo dpkg -i google-chrome.deb
-rm google-chrome.deb
+#printf '\n\n\n --->> installing Google Chrome... \n'
+#wget -O google-chrome.deb 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+#sudo dpkg -i google-chrome.deb
+#rm google-chrome.deb
 
 # set MS fonts
 sudo add-apt-repository multiverse
