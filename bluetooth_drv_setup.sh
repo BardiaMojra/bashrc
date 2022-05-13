@@ -12,7 +12,9 @@ sudo add-apt-repository ppa:blaze/rtbth-dkms
 sudo apt update
 sudo apt install rtbth-dkms
 
+printf '\n\n'
 printf "Add the command modprobe 'rtbth &> /dev/null' right before 'exit 0' and save."
+printf '\n\n'
 
 ## Pause it ##
 pause

@@ -1,4 +1,9 @@
 #!/bin/bash
+# pause function
+function pause(){
+ read -s -n 1 -p "Press any key to continue . . ."
+ echo ""
+}
 
 sudo apt clean && sudo apt update #&& sudo apt upgrade -y
 
@@ -6,7 +11,11 @@ printf '\n\n\n --->> setting up device drivers... \n'
 sudo apt-get purge xserver-xorg-video-intel
 sudo apt-get purge 'nvidia*'
 sudo apt autoremove
+
+
 printf '\n\n\n ---->>> Blacklist nouveau (xServer) graphics driver...'
+## Pause it ##
+pause
 sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
 sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
 printf '\n ---->>> Confirm the new modprobe config file...'
@@ -20,6 +29,8 @@ printf ' ---->>> now set PRIME mode to performance\n'
 printf '    \--->>> run nvidia-settings \n'
 printf '    \--->>> set PRIME mode to Performance \n'
 printf '    \--->>> reboot...\n'
+## Pause it ##
+pause
 
 
 printf '\n\n\n --->> install Solaar... \n'
@@ -32,7 +43,10 @@ sudo cp ./audio.conf /etc/bluetooth/audio.conf
 sudo service bluetooth restart
 
 printf '\n\n\n --->> upgrade packages... \n'
-sudo apt upgrade -y
+## Pause it ##
+pause
+
+sudo apt upgrade 
 
 printf '\n\n\n --->> install basics... \n'
 sudo apt install wget meld git okular curl tree tmux -y
