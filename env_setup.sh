@@ -9,6 +9,11 @@ sudo apt autoremove
 sudo ubuntu-drivers devices
 sudo ubuntu-drivers autoinstall
 
+
+printf '\n\n\n --->> install Solaar... \n'
+sudo add-apt-repository ppa:solaar-unifying/stable
+sudo apt update && sudo apt install solaar
+
 printf '\n\n\n --->> enable A2DP (High Fidelity) bluetooth audio... \n'
 sudo apt install pulseaudio pulseaudio-utils pavucontrol pulseaudio-module-bluetooth
 sudo cp ./audio.conf /etc/bluetooth/audio.conf
