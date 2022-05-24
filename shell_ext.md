@@ -9,5 +9,3 @@
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
 - [Arc Menu](https://extensions.gnome.org/extension/3628/arcmenu/)
 - [Pomodoro](https://extensions.gnome.org/extension/53/pomodoro/)
-
-# EOF

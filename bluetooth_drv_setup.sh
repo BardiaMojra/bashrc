@@ -24,11 +24,4 @@ sudo gedit /etc/rc.local
 sudo chmod 777 /etc/rc.local
 sudo apt install blueman
 
-
-printf '\n\n'
-printf ' ---->>> now set PRIME mode to performance\n'
-printf '    \--->>> run nvidia-settings \n'
-printf '    \--->>> set PRIME mode to Performance \n'
-
-
 # EOF

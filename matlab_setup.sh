@@ -1,9 +1,6 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt upgrade -y
-
-HOME_=/home/smerx
+sudo apt update && sudo apt upgrade -y
 
 # setup
 printf '\n\n\n\n \---->>> installing matlab...\n'
@@ -13,10 +10,11 @@ printf '   \---->>> https://www.mathworks.com/licensecenter/licenses/852709/2406
 printf '\n\n\n\n'
 
 
-sudo mkdir -p /usr/local/MATLAB/R2021a/
-mkdir $HOME_/Downloads/matlab
+sudo mkdir -p /usr/local/MATLAB/R2022a/
+mkdir ~/Downloads/matlab
 
-sudo unzip $HOME_/Downloads/matlab_*.zip -d ~/Downloads/matlab
-sudo bash $HOME_/Downloads/matlab/install
+sudo unzip ~/Downloads/matlab_*.zip -d ~/Downloads/matlab
+sudo su
+bash ~/Downloads/matlab/install
 
 # EOF

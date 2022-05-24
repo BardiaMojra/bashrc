@@ -4,22 +4,24 @@ function pause(){
  read -s -n 1 -p "Press any key to continue . . ."
  echo ""
 }
+sudo apt clean && sudo apt update && sudo apt upgrade -y
 
-sudo apt clean && sudo apt update #&& sudo apt upgrade -y
+# xhost +SI:localuser:root
 
-printf '\n\n\n --->> setting up device drivers... \n'
+printf '\n\n\n --->> perform step by step... \n'
+printf '\n\n\n --->> setting up latest nvidia driver... \n'
 sudo apt-get purge xserver-xorg-video-intel
 sudo apt-get purge 'nvidia*'
 sudo apt autoremove
-
-
 printf '\n\n\n ---->>> Blacklist nouveau (xServer) graphics driver...'
 ## Pause it ##
 pause
 sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
 sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+
 printf '\n ---->>> Confirm the new modprobe config file...'
 cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+
 sudo update-initramfs -u
 printf '\n\n\n --->> install recommended Nvidia driver... \n'
 sudo ubuntu-drivers devices
@@ -29,31 +31,25 @@ printf ' ---->>> now set PRIME mode to performance\n'
 printf '    \--->>> run nvidia-settings \n'
 printf '    \--->>> set PRIME mode to Performance \n'
 printf '    \--->>> reboot...\n'
-## Pause it ##
 pause
-
 
 printf '\n\n\n --->> install Solaar... \n'
 sudo add-apt-repository ppa:solaar-unifying/stable
 sudo apt update && sudo apt install solaar
-
 printf '\n\n\n --->> enable A2DP (High Fidelity) bluetooth audio... \n'
 sudo apt install pulseaudio pulseaudio-utils pavucontrol pulseaudio-module-bluetooth
 sudo cp ./audio.conf /etc/bluetooth/audio.conf
 sudo service bluetooth restart
 
 printf '\n\n\n --->> upgrade packages... \n'
-## Pause it ##
-pause
-
-sudo apt upgrade 
+sudo apt upgrade -y
 
 printf '\n\n\n --->> install basics... \n'
 sudo apt install wget meld git okular curl tree tmux -y
 sudo apt-get install ubuntu-restricted-extras -y
-sudo apt install
 
 printf '\n\n\n --->> install texlive? \n'
+pause
 sudo apt install texlive-full
 
 #git config --global user.email "bardia.mojra@gmail.com"
@@ -63,10 +59,10 @@ sudo apt install texlive-full
 sudo apt update
 sudo apt upgrade -y
 
-#printf '\n\n\n --->> installing Google Chrome... \n'
-#wget -O google-chrome.deb 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
-#sudo dpkg -i google-chrome.deb
-#rm google-chrome.deb
+# printf '\n\n\n --->> installing Google Chrome... \n'
+# wget -O google-chrome.deb 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+# sudo dpkg -i google-chrome.deb
+# rm google-chrome.deb
 
 # set MS fonts
 sudo add-apt-repository multiverse
