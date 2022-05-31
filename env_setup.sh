@@ -1,7 +1,7 @@
 #!/bin/bash
 # pause function
 function pause(){
- read -s -n 1 -p "Press any key to continue . . ."
+ read -s -n 1 -p "Press any key to continue..."
  echo ""
 }
 sudo apt clean && sudo apt update && sudo apt upgrade -y
@@ -9,6 +9,7 @@ sudo apt clean && sudo apt update && sudo apt upgrade -y
 # xhost +SI:localuser:root
 
 printf '\n\n\n --->> perform step by step... \n'
+pause
 printf '\n\n\n --->> setting up latest nvidia driver... \n'
 sudo apt-get purge xserver-xorg-video-intel
 sudo apt-get purge 'nvidia*'
@@ -36,6 +37,7 @@ pause
 printf '\n\n\n --->> install Solaar... \n'
 sudo add-apt-repository ppa:solaar-unifying/stable
 sudo apt update && sudo apt install solaar
+
 printf '\n\n\n --->> enable A2DP (High Fidelity) bluetooth audio... \n'
 sudo apt install pulseaudio pulseaudio-utils pavucontrol pulseaudio-module-bluetooth
 sudo cp ./audio.conf /etc/bluetooth/audio.conf
