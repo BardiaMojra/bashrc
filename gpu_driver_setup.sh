@@ -4,6 +4,7 @@ sudo apt update
 sudo apt upgrade -y
 
 printf '\n\n\n --->> setting up latest nvidia driver... \n'
+printf '\n\n\n --->> blacklist XServer nouveau driver... \n'
 sudo apt-get purge xserver-xorg-video-intel
 sudo apt-get purge 'nvidia*'
 #sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
