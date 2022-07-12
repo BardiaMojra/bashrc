@@ -1,5 +1,5 @@
 [credential]
-	helper = store
+	helper = store --file ./../../.git-credentials
 [credential "https://github.com"]
   useHttpPath = true
 [user]
