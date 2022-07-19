@@ -1,0 +1,33 @@
+[credential]
+	helper = store --file ./../../.git-credentials
+[credential "https://github.com"]
+  useHttpPath = true
+[user]
+	name = bardi
+	email = bardia.mojra@uta.edu
+[user]
+	name = bardi
+	email = bardia.mojra@gmail.com
+[user "https://BardiaMojra@github.com"]
+	name = bardi
+	email = bardia.mojra@gmail.com
+[user "https://uta-bardia@github.com"]
+	name = bardi
+	email = bardia.mojra@uta.edu
+[color]
+	ui = true
+	diff=auto
+  status=auto
+  branch=auto
+[diff]
+	tool = meld
+[difftool]
+    prompt = true
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+	cmd = meld
+    
+
+
+[core]
+	editor = gedit
