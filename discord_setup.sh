@@ -1,6 +1,6 @@
-#!/bin/bash 
+#!/bin/bash
 
-sudo apt update 
+sudo apt update
 
 # download and install latest Discord
 printf '\n\n\n --->> Installing latest Discord...\n'
@@ -9,6 +9,4 @@ sudo apt install gconf-service gconf-service-backend gconf2-common libappindicat
 wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
 sudo dpkg -i ./discord.deb
 
-printf ' \-->> Discord installation finished...\n\n\n\n\n'
-
-
+printf ' \-->> Discord installation finished...'

@@ -1,9 +1,12 @@
 #!/bin/bash
 
 
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root..."
+  exit
+fi
 sudo apt clean && sudo apt update && sudo apt upgrade -y
 printf '\n\n\n ---->>> installing the latest gnome shell extension...'
-
 # install latest Gnome Shell extension
 sudo apt install -y gnome-tweaks
 sudo apt install -y gnome-shell-extensions
