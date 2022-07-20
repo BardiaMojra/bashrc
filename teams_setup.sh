@@ -1,5 +1,10 @@
  #!/bin/bash
 
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
 sudo apt clean && sudo apt update && sudo apt upgrade -y
 
 # install MS teams
