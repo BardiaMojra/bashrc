@@ -13,15 +13,17 @@ sudo apt clean && sudo apt update # && sudo apt upgrade -y
 
 # xhost +SI:localuser:root
 
-printf '\n\n\n --->> perform step by step... \n'
-printf '\n\n\n --->> git credentials format: https://user:pass@example.com \n'
+printf '--->> perform step by step... '
+printf '--->> git credentials format: https://user:pass@example.com '
 pause
-printf '\n\n\n --->> setting up git config... \n'
+printf ' '
+printf '--->> setting up git config...'
+printf 'store credentials at  ~/.git-credentials'
 
-git config --global credential.helper 'store --file ./../../.git-credentials'
+git config --global credential.helper store
 #git config --global user.email "bardia.mojra@gmail.com"
 #git config --global user.name "bardi"
 #git init #Turn an existing directory into a git repository
-cp ./.git-credentials ./../../.git-credentials
+cp ./.git-credentials ~/.git-credentials
 
 # EOF
