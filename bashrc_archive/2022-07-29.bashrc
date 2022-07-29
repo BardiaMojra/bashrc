@@ -194,7 +194,6 @@ alias cleanWS='rm -rf build devel install'
 alias soundon='pacmd set-card-profile device_name a2dp_sink'
 alias showCards='pacmd list-cards'
 alias hybnow='sudo systemctl hibernate' # @link https://askubuntu.com/questions/1240123/how-to-enable-the-hibernate-option-in-ubuntu-20-04
-alias tmux="T​ERM​=sc​ree​n-2​56c​olo​r-bce tmux" 
 
 # --------------- stdout and stderr ---------------
 #  python qekf.py > ../out/out.txt 2> ../out/err.log
