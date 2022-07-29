@@ -260,10 +260,14 @@ export gtoken_p='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' #Cyber-01 - personal
 
 ### ----->>> git cheat sheet <<<------------------------------------ git cheat
 #branch_name=$(git symbolic-ref -q HEAD) branch_name=${branch_name##refs/heads/}
-
 #branch_name=$(git symbolic-ref -q HEAD)
 #branch_name=${branch_name##refs/heads/}
 #branch_name=${branch_name:-HEAD}
+
+#git log --oneline --graph     # really cool <<<---------- 
+
+# git reset --mixed HEAD~1  # undo the last commit and keep changes
+
 #git config --global credential.helper store
 #git config --global user.email 'bardia.mojra@gmail.com'
 #git config --global user.name 'bardi'
