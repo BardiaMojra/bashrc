@@ -1,0 +1,12 @@
+[Default Applications]
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/kite=kite-copilot.desktop
+application/pdf=okularApplication_pdf.desktop
+x-scheme-handler/mailto=google-chrome.desktop
+
+[Added Associations]
+application/pdf=okularApplication_pdf.desktop;
