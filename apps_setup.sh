@@ -14,23 +14,23 @@ sudo apt clean && sudo apt update && sudo apt upgrade -y
 
 # xhost +SI:localuser:root
 
-printf '\n\n\n --->> install Solaar... \n'
+echo ' --->> install Solaar... '
 sudo add-apt-repository ppa:solaar-unifying/stable
 sudo apt update && sudo apt install solaar -y
 
-printf '\n\n\n --->> enable A2DP (High Fidelity) bluetooth audio... \n'
+echo ' --->> enable A2DP (High Fidelity) bluetooth audio... '
 sudo apt install pulseaudio pulseaudio-utils pavucontrol pulseaudio-module-bluetooth
 sudo cp ./audio.conf /etc/bluetooth/audio.conf
 sudo service bluetooth restart
 
-printf '\n\n\n --->> upgrade packages... \n'
+echo ' --->> upgrade packages... '
 sudo apt upgrade -y
 
-printf '\n\n\n --->> install basics... \n'
+echo ' --->> install basics... '
 sudo apt install wget meld git okular curl tree tmux -y
 sudo apt-get install ubuntu-restricted-extras -y
 
-printf '\n\n\n --->> install texlive? \n'
+echo ' --->> install texlive? '
 sudo apt install texlive-full -y
 sudo apt install  gnome-shell-extensions -y
 
