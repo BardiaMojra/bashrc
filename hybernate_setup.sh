@@ -1,6 +1,17 @@
 #!/bin/bash
 # @link https://askubuntu.com/questions/1240123/how-to-enable-the-hibernate-option-in-ubuntu-20-04
 
+# pause function
+function pause(){
+ read -s -n 1 -p "Press any key to continue..."
+ echo ""
+}
+
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
 sudo apt clean && sudo apt update && sudo apt upgrade -y
 echo ' --->> assuming SWAP partition available.'
 echo ' --->> install pm-utils and hibernate ... '

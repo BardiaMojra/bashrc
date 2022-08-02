@@ -22,6 +22,6 @@ pause
 sudo gedit /etc/rc.local
 
 sudo chmod 777 /etc/rc.local
-sudo apt install blueman
+sudo apt install blueman -y
 
 # EOF
