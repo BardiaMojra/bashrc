@@ -13,9 +13,7 @@ fi
 sudo apt clean && sudo apt update && sudo apt upgrade -y
 
 
-echo ' '
-echo ' '
+echo ' ' && echo ' '
 echo ' --->> setting up gnome software center (app store)...'
-echo ' '
-echo ' '
-sudo apt autoremove gnome-software && sudo apt install gnome-software -y
+echo ' ' && echo ' '
+sudo apt autoremove gnome-software -y && sudo apt install gnome-software -y
