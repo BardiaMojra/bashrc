@@ -3,7 +3,7 @@
 # config
 _cv_version="3.4.9"
 
-printf '\n\n\n\n ---->>> setting up opencv-%s source files...\n' ${_cv_version}
+printf ' ---->>> setting up opencv-%s source files...' ${_cv_version}
 # setup
 
 ## dependencies

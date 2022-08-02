@@ -7,14 +7,14 @@ function pause(){
 }
 
 sudo apt clean && sudo apt update && sudo apt upgrade -y
-printf '\n\n\n ---->>> installing latest bluetooth driver...'
+echo ' ---->>> installing latest bluetooth driver...'
 sudo add-apt-repository ppa:blaze/rtbth-dkms
 sudo apt update
 sudo apt install rtbth-dkms
 
-printf '\n\n'
-printf "Add the command modprobe 'rtbth &> /dev/null' right before 'exit 0' and save."
-printf '\n\n'
+echo ''
+echo "Add the command modprobe 'rtbth &> /dev/null' right before 'exit 0' and save."
+echo ''
 
 ## Pause it ##
 pause

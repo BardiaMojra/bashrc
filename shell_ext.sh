@@ -6,7 +6,7 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 sudo apt clean && sudo apt update && sudo apt upgrade -y
-printf '\n\n\n ---->>> installing the latest gnome shell extension...'
+echo ' ---->>> installing the latest gnome shell extension...'
 # install latest Gnome Shell extension
 sudo apt install -y gnome-tweaks
 sudo apt install -y gnome-shell-extensions
