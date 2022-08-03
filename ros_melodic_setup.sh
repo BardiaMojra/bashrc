@@ -1,9 +1,28 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt upgrade -y
+function pause(){
+  echo ' ' && echo ' '
+  read -s -n 1 -p "press any key to continue..."
+  echo ' ' && echo ' '
+}
 
-echo '\n\n\n --->> Installing ROS melodic...\n'
+if [ "$EUID" -ne 0 ]
+  echo ' ' && echo ' '
+  then echo "please run as root..."
+  echo ' ' && echo ' '
+  exit
+fi
+
+sudo apt clean && sudo apt update && sudo apt upgrade -y
+
+# xhost +SI:localuser:root
+echo ' ' && echo ' '
+echo ' --->> installing ROS melodic...'
+echo ' --->> perform step by step... '
+echo ' ' && echo ' '
+pause
+echo ' ' && echo ' '
+
 
 sudo add-apt-repository multiverse
 

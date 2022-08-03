@@ -1,12 +1,15 @@
 #!/bin/bash
-# pause function
+
 function pause(){
- read -s -n 1 -p "Press any key to continue..."
- echo ""
+  echo ' ' && echo ' '
+  read -s -n 1 -p "press any key to continue..."
+  echo ' ' && echo ' '
 }
 
 if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
+  echo ' ' && echo ' '
+  then echo "please run as root..."
+  echo ' ' && echo ' '
   exit
 fi
 
@@ -67,33 +70,23 @@ sudo apt upgrade -y
 echo ' ' && echo ' '
 echo '--->> install basics'
 echo ' ' && echo ' '
-sudo apt install wget meld git okular curl tree tmux -y
+sudo apt install wget meld git okular curl tree tmux pandoc -y
 sudo apt-get install ubuntu-restricted-extras -y
-
-#echo ' ' && echo ' '
-#echo '--->> install texlive'
-#echo ' ' && echo ' '
-#sudo apt install texlive-full -y
 
 echo ' ' && echo ' '
 echo '--->> install gnome-shell-extension'
 echo ' ' && echo ' '
 sudo apt install gnome-shell-extensions -y
 
-#echo ' ' && echo ' '
-#echo '--->> install spotify'
-#echo ' ' && echo ' '
-#curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add -
-#echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-#sudo apt-get update && sudo apt-get install spotify-client -y
-
 #git config --global user.email "bardia.mojra@gmail.com"
 #git config --global user.name "bardi"
 #git init #Turn an existing directory into a git repository
 
-
-
 # set MS fonts
+echo ' ' && echo ' '
+echo '--->> install ms fonts'
+echo ' ' && echo ' '
+pause
 sudo add-apt-repository multiverse
 sudo apt update && sudo apt install ttf-mscorefonts-installer -y
 sudo fc-cache -f -v
