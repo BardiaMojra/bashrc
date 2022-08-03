@@ -3,7 +3,7 @@
 sudo apt update
 sudo apt upgrade -y
 
-printf '\n\n\n --->> Installing ROS melodic...\n'
+echo '\n\n\n --->> Installing ROS melodic...\n'
 
 sudo add-apt-repository multiverse
 
@@ -27,4 +27,3 @@ rosdep update
 
 
 # EOF
-
