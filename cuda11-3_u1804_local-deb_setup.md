@@ -16,6 +16,7 @@ sudo dpkg -i cuda-repo-ubuntu1804-11-3-local_11.3.0-465.19.01-1_amd64.deb
 sudo apt-key add /var/cuda-repo-ubuntu1804-11-3-local/7fa2af80.pub
 sudo apt-get update
 sudo apt-get -y install cuda
+sudo rm cuda-repo-ubuntu1804-11-3-local_11.3.0-465.19.01-1_amd64.deb
 ```
 
 Install NVIDIA driver

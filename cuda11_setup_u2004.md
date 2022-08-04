@@ -12,6 +12,8 @@ Add NVIDIA package repositories
 
     sudo apt install ./nvidia-machine-learning-repo-ubuntu2004_1.0.0-1_amd64.deb
     sudo apt-get update
+sudo rm ./nvidia-machine-learning-repo-ubuntu2004_1.0.0-1_amd64.deb
+
 
 Install NVIDIA driver
 
