@@ -14,7 +14,8 @@ sudo mkdir -p /usr/local/MATLAB/R2022a/
 mkdir ~/Downloads/matlab
 
 sudo unzip ~/Downloads/matlab_*.zip -d ~/Downloads/matlab
-sudo su
-bash ~/Downloads/matlab/install
-
+sudo chmod -R 777 ~/Downloads/matlab
+cd ~/Downloads/matlab
+sudo ./install
+sudo chmod a+w -R ~/.matlab/R2022a/
 # EOF
