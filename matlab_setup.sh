@@ -18,4 +18,16 @@ sudo chmod -R 777 ~/Downloads/matlab
 cd ~/Downloads/matlab
 sudo ./install
 sudo chmod a+w -R ~/.matlab/R2022a/
+
+echo ' \---->>> cloning matlab snippets repo...'
+cd ~/git && git clone https://github.com/trnkap/matlab-snippets.git matlab-snippets
+echo ' \---->>> install snippets by using "Install App" inside matlab...'
+
+#sudo chmod a+w -R ~/git/matlab-snippets
+#bash 'matlab-snippets/MATLAB Snippets.mlappinstall'
+
+
+
+
+
 # EOF
