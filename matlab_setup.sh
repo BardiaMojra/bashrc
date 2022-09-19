@@ -10,14 +10,14 @@ echo '   \---->>> https://www.mathworks.com/licensecenter/licenses/852709/240643
 echo ''
 
 
-sudo mkdir -p /usr/local/MATLAB/R2022a/
+sudo mkdir -p /usr/local/MATLAB/R2022b/
 mkdir ~/Downloads/matlab
 
 sudo unzip ~/Downloads/matlab_*.zip -d ~/Downloads/matlab
 sudo chmod -R 777 ~/Downloads/matlab
 cd ~/Downloads/matlab
 sudo ./install
-sudo chmod a+w -R ~/.matlab/R2022a/
+sudo chmod a+w -R ~/.matlab/R2022b/
 
 echo ' \---->>> cloning matlab snippets repo...'
 cd ~/git && git clone https://github.com/trnkap/matlab-snippets.git matlab-snippets
