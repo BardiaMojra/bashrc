@@ -10,7 +10,7 @@ echo '   \---->>> https://www.mathworks.com/licensecenter/licenses/852709/240643
 echo ''
 
 
-sudo mkdir -p /usr/local/MATLAB/R2022b/
+sudo mkdir -p /usr/local/MATLAB/R2021a/
 mkdir ~/Downloads/matlab
 
 sudo unzip ~/Downloads/matlab_*.zip -d ~/Downloads/matlab

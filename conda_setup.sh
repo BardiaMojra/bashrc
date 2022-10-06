@@ -15,7 +15,7 @@ fi
 sudo apt clean && sudo apt update && sudo apt upgrade -y
 
 echo ' ' && echo ' '
-echo ' \---->>> installing latest conda...\n'
+echo ' \---->>> installing latest conda...'
 echo ' ' && echo ' '
 pause
 #install latest Conda
