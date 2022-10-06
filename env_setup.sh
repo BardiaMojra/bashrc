@@ -13,7 +13,7 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-sudo apt clean && sudo apt update && sudo apt upgrade -y
+sudo apt clean && sudo apt update && apt upgrade -y
 
 # xhost +SI:localuser:root
 echo ' ' && echo ' '
