@@ -203,7 +203,7 @@ alias hybnow='sudo systemctl hibernate' # @link https://askubuntu.com/questions/
 alias EFI_theme='sudo gedit /boot/efi/EFI/refind/themes/darkmini/theme.conf'
 alias EFI_config='sudo gedit /boot/efi/EFI/refind/refind.conf'
 
-# get .gitignore files
+# ------------------------------------------------------->> get .gitignore files
 # /git/cheatsheets/gitignores/
 #alias gigc='cp ~/git/cheatsheets/gitignores/C.gitignore ./c.gitignore'
 #alias gigcpp
@@ -222,6 +222,11 @@ alias gigmatlab='cp ~/git/cheatsheets/gitignores/global/MATLAB.gitignore ./matla
 #alias gigvscode
 #alias gigvenv
 #alias gig
+
+# ---------------------------------------------------------->> matlab vers.
+alias matlab21a="/usr/local/MATLAB/R2021a/bin/matlab . &"
+alias matlab22a="/usr/local/MATLAB/R2022a/bin/matlab . &"
+#alias matlab21a="/usr/local/MATLAB/R2021a/bin/matlab . &"
 
 
 # --------------- stdout and stderr ---------------
