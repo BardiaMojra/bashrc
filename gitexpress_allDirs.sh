@@ -29,6 +29,7 @@ for i in $(ls -d */)
 do
   echo ${i%%/}
 done
+echo ' ' && echo ' '
 
 for i in $(ls -d */)
 do
