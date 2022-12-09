@@ -6,12 +6,6 @@ function pause(){
   echo ' ' && echo ' '
 }
 
-if [ "$EUID" -ne 0 ]
-  echo ' ' && echo ' '
-  then echo "please run as root..."
-  echo ' ' && echo ' '
-  exit
-fi
 
 sudo apt clean && sudo apt update && apt upgrade -y
 
