@@ -16,7 +16,7 @@ echo ' ' && echo ' '
 
 sudo add-apt-repository ppa:slimbook/slimbook
 sudo apt update
-sudo apt install slimbookbattery
+sudo apt install slimbookbattery -y
 
 echo ' ' && echo ' '
 echo '--->> to remove, run: '
