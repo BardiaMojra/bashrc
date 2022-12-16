@@ -12,6 +12,7 @@ echo '--->> installing basics'
 echo ' ' && echo ' '
 sudo apt install wget meld git okular curl tree tmux pandoc -y
 sudo apt-get install ubuntu-restricted-extras -y
+sudo apt install gparted -y
 #sudo snap install vlc -y
 #sudo apt install wine winetricks -y
 #sudo apt install steam
