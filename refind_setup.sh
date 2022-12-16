@@ -20,9 +20,13 @@ echo '--->> https://sourceforge.net/projects/refind/files/'
 echo ' ' && echo ' '
 pause
 echo ' ' && echo ' '
-#cd ~/Downloads
-sudo dpkg -i ~/Downloads/refind*.deb
+sudo dpkg -i ../../Downloads/refind*.deb
 sudo apt install thunar -y
-
+echo '--->> in thunar...' && echo ' ' && echo ' '
+echo '--->> go to /boot/efi/EFI/' && echo ' ' && echo ' '
+echo '--->> create "IGNORE"' && echo ' ' && echo ' '
+echo '--->> mv boot, ubuntu, and tools to IGNORE dir' && echo ' ' && echo ' '
+pause
+sudo thunar
 
 # EOF

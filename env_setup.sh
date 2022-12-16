@@ -1,64 +1,59 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 function pause(){
   echo ' ' && echo ' '
   read -s -n 1 -p "press any key to continue..."
   echo ' ' && echo ' '
 }
 
-if [ "$EUID" -ne 0 ]
-  echo ' ' && echo ' '
-  then echo "please run as root..."
-  echo ' ' && echo ' '
-  exit
-fi
+# if [ "$EUID" -ne 0 ]
+#   echo ' ' && echo ' '
+#   then echo "please run as root..."
+#   echo ' ' && echo ' '
+#   exit
+# fi
 
 sudo apt clean && sudo apt update && apt upgrade -y
 
+
+## user user stuff
 # xhost +SI:localuser:root
+# Run root's shell profile, change to root's home dir.
+ #sudo -u root -i eval 'echo $SHELL - $USER - $HOME - $PWD'
+# Don't run root's shell profile, use current working dir.
+# Note the required -H to define $HOME as root`s home dir.
+ #sudo -u root -H -s eval 'echo $SHELL - $USER - $HOME - $PWD'
 
 
-echo ' ' && echo ' '
-echo '--->> install basics'
-echo ' ' && echo ' '
-sudo apt install wget meld git okular curl tree tmux pandoc -y
-sudo apt-get install ubuntu-restricted-extras -y
 
-echo ' ' && echo ' '
-echo '--->> install gnome-shell-extension'
-echo ' ' && echo ' '
-sudo apt install gnome-shell-extensions -y
-
+sudo -u root -H -s bash refind_spwdetup.sh
+sudo bash basics_setup.sh
 sudo bash git_setup.sh
-sudo bash vscode_setup.sh
-sudo bash refind_setup.sh
+
+#sudo bash msfonts_setup.sh
+
+sudo bash shell_ext_setup.sh
+#sudo bash vscode_setup.sh
 sudo bash gnome_software_setup.sh
 sudo bash teams_setup.sh
 sudo bash bluetooth_drv_setup.sh
-sudo bash shell_ext_setup.sh
 sudo bash slimbookbattery_setup.sh
 sudo bash solaar_setup.sh
 sudo bash spotify_setup.sh
 
 
-
-okular shell_ext.pdf
-
-
-
-# set MS fonts
-echo ' ' && echo ' '
-echo '--->> install ms fonts'
-echo ' ' && echo ' '
-pause
-sudo add-apt-repository multiverse
-sudo apt update && sudo apt install ttf-mscorefonts-installer -y
-sudo fc-cache -f -v
-# reinstall if accidentally reject the license agreement
-sudo apt install --reinstall ttf-mscorefonts-installer
-sudo apt-get update --fix-missing
-
 cp ./.bashrc ~/.bashrc
+source ~/.bashrc
+
+
+echo ' ' && echo ' '
+echo '--->> install shell extensions...'
+echo ' ' && echo ' '
+okular shell_ext.pdf
+pause
+
+echo ' ' && echo ' '
+echo '--->> setup finished'
+echo ' ' && echo ' ' && echo ' ' && echo ' '
 
 
 # EOF

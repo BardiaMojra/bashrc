@@ -19,7 +19,7 @@ git config --global credential.helper store
 git config --global user.email "bardia.mojra@gmail.com"
 git config --global user.name "bardi"
 #git init #Turn an existing directory into a git repository
-cp ./.git-credentials ~/.git-credentials
-cp ./.gitconfig ~/.gitconfig
+cp ./.git-credentials ../../.git-credentials
+cp ./.gitconfig ../../.gitconfig
 
 # EOF

@@ -7,7 +7,7 @@ fi
 
 sudo apt clean && sudo apt update && sudo apt upgrade -y
 echo ' ' && echo ' '
-echo ' ---->>> installing latest gnome shell extension'
+echo ' ---->>> installing gnome shell extension'
 echo ' ' && echo ' '
 sudo apt install -y gnome-tweaks
 sudo apt install -y gnome-shell-extensions
