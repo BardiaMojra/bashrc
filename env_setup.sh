@@ -26,13 +26,13 @@ sudo apt clean && sudo apt update && apt upgrade -y
 
 
 sudo -u root -H -s bash refind_spwdetup.sh
-sudo bash basics_setup.sh
-sudo bash git_setup.sh
+sudo -u root -H -s bash basics_setup.sh
+sudo -u root -H -s bash git_setup.sh
 
 #sudo bash msfonts_setup.sh
 
-sudo bash shell_ext_setup.sh
-#sudo bash vscode_setup.sh
+sudo -u root -H -s bash shell_ext_setup.sh
+#sudo -u root -H -s bash vscode_setup.sh
 sudo bash gnome_software_setup.sh
 sudo bash teams_setup.sh
 sudo bash bluetooth_drv_setup.sh
