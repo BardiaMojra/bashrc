@@ -25,7 +25,7 @@ sudo apt clean && sudo apt update && apt upgrade -y
 
 
 
-sudo -u root -H -s bash refind_spwdetup.sh
+sudo -u root -H -s bash refind_setup.sh
 sudo -u root -H -s bash basics_setup.sh
 sudo -u root -H -s bash git_setup.sh
 
@@ -33,22 +33,22 @@ sudo -u root -H -s bash git_setup.sh
 
 sudo -u root -H -s bash shell_ext_setup.sh
 #sudo -u root -H -s bash vscode_setup.sh
-sudo bash gnome_software_setup.sh
-sudo bash teams_setup.sh
-sudo bash bluetooth_drv_setup.sh
-sudo bash slimbookbattery_setup.sh
-sudo bash solaar_setup.sh
-sudo bash spotify_setup.sh
+sudo -u root -H -s bash gnome_software_setup.sh
+sudo -u root -H -s bash teams_setup.sh
+sudo -u root -H -s bash bluetooth_drv_setup.sh
+sudo -u root -H -s bash slimbookbattery_setup.sh
+sudo -u root -H -s bash solaar_setup.sh
+sudo -u root -H -s bash spotify_setup.sh
 
 
-cp ./.bashrc ~/.bashrc
-source ~/.bashrc
+sudo -u root -H -s cp ./.bashrc ~/.bashrc
+sudo -u root -H -s source ~/.bashrc
 
 
 echo ' ' && echo ' '
 echo '--->> install shell extensions...'
 echo ' ' && echo ' '
-okular shell_ext.pdf
+okular shell_ext.pdf &
 pause
 
 echo ' ' && echo ' '
