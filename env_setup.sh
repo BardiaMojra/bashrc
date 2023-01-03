@@ -34,6 +34,7 @@ sudo -u root -H -s bash git_setup.sh
 sudo -u root -H -s bash shell_ext_setup.sh
 #sudo -u root -H -s bash vscode_setup.sh
 <<<<<<< HEAD
+<<<<<<< HEAD
 sudo bash gnome_software_setup.sh
 sudo bash teams_setup.sh
 sudo bash bluetooth_drv_setup.sh
@@ -41,12 +42,17 @@ sudo bash slimbookbattery_setup.sh
 sudo bash solaar_setup.sh
 sudo bash spotify_setup.sh
 =======
+=======
+>>>>>>> 7ce2a36f902a962dc48e47825c32fa257c740359
 sudo -u root -H -s bash gnome_software_setup.sh
 sudo -u root -H -s bash teams_setup.sh
 sudo -u root -H -s bash bluetooth_drv_setup.sh
 sudo -u root -H -s bash slimbookbattery_setup.sh
 sudo -u root -H -s bash solaar_setup.sh
 sudo -u root -H -s bash spotify_setup.sh
+<<<<<<< HEAD
+>>>>>>> 7ce2a36f902a962dc48e47825c32fa257c740359
+=======
 >>>>>>> 7ce2a36f902a962dc48e47825c32fa257c740359
 
 
