@@ -36,3 +36,14 @@ echo ' ---->>> now set PRIME mode to performance'
 echo '    \--->>> run nvidia-settings '
 echo '    \--->>> set PRIME mode to Performance '
 echo '    \--->>> reboot...'
+
+
+# still not detecting one or more external monitors? Check modeset settings
+# Looks like you ran into a driver bug with 430.50 where the gpu thinks it has no outputs. Try adding the graphics ppa and update to 440. Alternatively, run
+# grep nvidia /etc/modprobe.d/* /lib/modprobe.d/*
+#to find a file containing
+# options nvidia-drm modeset=1
+#and change 1 to 0
+#then run
+#sudo update-initramfs -u
+# and reboot.
