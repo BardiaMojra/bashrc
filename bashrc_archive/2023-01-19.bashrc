@@ -250,7 +250,7 @@ alias matlab22a="/usr/local/MATLAB/R2022a/bin/matlab . &"
 
 # --------------- permissions ---------------
 # Basic syntax:
-#sudo chown -R smerx:smerx opencv-3.4.9/
+# sudo chown -R smerx:smerx opencv-3.4.9/
 #find /path/to/directory -type d -exec chmod 775 {} \; # for directories - d flag
 #find /path/to/directory -type f -exec chmod 775 {} \; # for files - f flag
 # This changes the permissions on the "directory" directory and all
