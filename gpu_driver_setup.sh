@@ -13,9 +13,15 @@ fi
 sudo apt clean && sudo apt update && sudo apt upgrade -y
 
 echo '--->> setting up latest nvidia driver... '
+
+echo '--->> remove nvidia driver and packages... '
+sudo apt-get --purge remove "*cuda*" "*cublas*" "*cufft*" "*cufile*" "*curand*" \
+ "*cusolver*" "*cusparse*" "*gds-tools*" "*npp*" "*nvjpeg*" "nsight*" "*nvvm*"
+sudo apt-get --purge remove "*nvidia*" "libxnvctrl*"
+sudo apt-get autoremove
+
 echo '--->> blacklist XServer nouveau driver... '
 sudo apt-get purge xserver-xorg-video-intel
-sudo apt-get purge 'nvidia*'
 sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
 sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
 
