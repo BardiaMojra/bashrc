@@ -142,10 +142,9 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-# ----------------------------------------------------------------->> custom commands and aliases
+# -------------------------------------------------------------->> 
 #alias hibernate="sudo systemctl hibernate"
 #alias reboot="sudo systemctl reboot"
-alias shlup="sudo -u root -H -s bash ~/git/bashrc/" # shellup env_setup.sh
 alias shellup="sudo -u root -H -s bash " # shellup env_setup.sh
 alias mybash="gedit ~/.bashrc &"
 alias catbash="cat ~/.bashrc "
