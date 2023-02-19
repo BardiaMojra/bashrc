@@ -5,12 +5,12 @@ function pause(){ # pause function
  echo ""
 }
 
-if [ "$EUID" -ne 0 ] # check sudo
-  echo ' ' && echo ' '
-  then echo "please run as root..."
-  echo ' ' && echo ' '
-  exit
-fi
+# if [ "$EUID" -ne 0 ] # check sudo
+#   echo ' ' && echo ' '
+#   then echo "please run as root..."
+#   echo ' ' && echo ' '
+#   exit
+# fi
 
 sudo apt clean && sudo apt update && sudo apt upgrade -y
 
