@@ -44,8 +44,8 @@ echo "    stat /home/user/.docker/config.json: permission denied"
 echo " "
 echo " This error indicates that the permission settings for the ~/.docker/ directory are incorrect, due to having used the sudo command earlier."
 echo " To fix this problem, either remove the ~/.docker/ directory (it's recreated automatically, but any custom settings are lost), or change its ownership and permissions using the following commands:"
-echo '    sudo chown "$USER":"$USER" /home/"$USER"/.docker -R'
-echo '    sudo chmod g+rwx "$HOME/.docker" -R'
+echo '    sudo chown "$USER":"$USER" /home/"$USER"/docker -R'
+echo '    sudo chmod g+rwx "$HOME/docker" -R'
 
 
 
