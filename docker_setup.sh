@@ -36,13 +36,37 @@ sudo -u root -H -s  apt-get install docker-ce docker-ce-cli containerd.io docker
 echo ' ' && echo ' '
 echo '--->> docker installed.'
 echo ' ' && echo ' '
-echo ' ' && echo ' '
-echo '--->> Test docker?'
-echo ' ' && echo ' '
-pause
 
+echo ' ' && echo ' '
+read -p '--->> test docker? (yes/no)' yn
+echo ' ' && echo ' '
+case $yn in
+	yes ) sudo -u root -H -s  docker run hello-world;;
+	no ) echo "--->> docker Hello World not tested...";
+		exit;;
+	* ) echo invalid response;
+		exit 1;;
+esac
+
+
+
+
+echo ' ' && echo ' '
+echo '--->> for more details on Docker group permissions, see https://docs.docker.com/engine/install/linux-postinstall/'
+read -p '--->> setup Docker group permissions (postinstall)? (yes/no)' yn
+echo ' ' && echo ' '
+case $yn in
+	yes ) sudo -u root -H -s  docker_postinstall_setup.sh;;
+	no ) echo "--->> post-installation not setup...";
+		exit;;
+	* ) echo invalid response;
+		exit 1;;
+esac
+
+echo doing stuff...
 # test
 sudo -u root -H -s  docker run hello-world
+
 
 echo ' ' && echo ' '
 echo '--->> setup finished'
