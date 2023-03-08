@@ -1,0 +1,7 @@
+[credential]
+	helper = store
+[user]
+	email = bardia.mojra@gmail.com
+	name = bardi
+[safe]
+	directory = /home/smerx/git/dlo/dev/src/opencv-3.4.9/opencv
