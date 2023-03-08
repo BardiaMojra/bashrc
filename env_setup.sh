@@ -40,19 +40,17 @@ sudo -u root -H -s bash slimbookbattery_setup.sh
 sudo -u root -H -s bash solaar_setup.sh
 sudo -u root -H -s bash spotify_setup.sh
 
+
+echo ' ' && echo ' ' && echo '--->> load all configs...' && echo ' ' && echo ' '
 sudo -u root -H -s cp ./.bashrc ~/.bashrc
 sudo -u root -H -s source ~/.bashrc
+sudo -u root -H -s loadallcgs
 
-
-echo ' ' && echo ' '
-echo '--->> install shell extensions...'
-echo ' ' && echo ' '
+echo ' ' && echo '' && echo '--->> install shell extensions...' && echo ' ' && echo ' '
 okular shell_ext.pdf &
 pause
 
-echo ' ' && echo ' '
-echo '--->> setup finished'
-echo ' ' && echo ' ' && echo ' ' && echo ' '
+echo ' ' && echo ' '&& echo '--->> setup finished.'&& echo ' ' && echo ' '
 
 
 # EOF
