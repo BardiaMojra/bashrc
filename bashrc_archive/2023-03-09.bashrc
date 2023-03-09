@@ -351,18 +351,31 @@ alias matlab22a="/usr/local/MATLAB/R2022a/bin/matlab . &"
 
 
 
-## --------------- git ---------------
-### ----->>> gToken <<<-----
+# ----------------------------------------------------------------------->>> git
+# ----->>> gToken <<<-----
 export gtoken_u='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' #QVPose_t01 = uta
 export gtoken_p='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' #Cyber-01 - personal
 
-### ----->>> git cheat sheet <<<------------------------------------ git cheat
+### ------------------------------------------------------------>>> [cheat]: git
 #branch_name=$(git symbolic-ref -q HEAD) branch_name=${branch_name##refs/heads/}
 #branch_name=$(git symbolic-ref -q HEAD)
 #branch_name=${branch_name##refs/heads/}
 #branch_name=${branch_name:-HEAD}
 
 
+## --------------------------------------------------------->>> [cheat]: docker 
+
+### Uninstall/purge all docker packages, images, containers, volume, and ... 
+# sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin \
+# docker-compose-plugin docker-ce-rootless-extras && \
+# sudo rm -rf /var/lib/docker && \
+# sudo rm -rf /var/lib/containerd
+
+
+
+
+
+### -------------------------------------------------------------------->>> temp
 #experimental  ---> needs $(parse_git_branch)
 #export PS1="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h\[$WHITE\]: [\[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" - \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]] \$ \[$RESET\]"
 
@@ -387,10 +400,21 @@ export gtoken_p='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' #Cyber-01 - personal
 
 #source /home/smerx/Next-Best-View-Grasping/catkin_ws/devel_isolated/setup.bash
 #source /home/smerx/Next-Best-View-Grasping/catkin_ws/devel/setup.bash
-#---- source workspace 
+# ------------------------------------------------------>>> ROS source workspace 
 alias swsdlo='source /opt/ros/humble/setup.bash && dlo_ws/install/local_setup.bash'
 
-
+# ------------------------------------------------------------------>>> bin path
+export PATH=/home/smerx/.local/bin:\
+/home/smerx/anaconda3/bin:\
+/usr/local/sbin:\
+/usr/local/bin:\
+/usr/sbin:\
+/usr/bin:\
+/sbin:\
+/bin:\
+/usr/games:\
+/usr/local/games:\
+/snap/bin:\
+/snap/bin
 
 # EOF
-export PATH=/home/smerx/.local/bin:/home/smerx/anaconda3/bin:/home/smerx/anaconda3/bin:/home/smerx/anaconda3/bin:/home/smerx/anaconda3/bin:/home/smerx/anaconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
