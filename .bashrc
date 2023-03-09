@@ -393,3 +393,4 @@ alias swsdlo='source /opt/ros/humble/setup.bash && dlo_ws/install/local_setup.ba
 
 
 # EOF
+export PATH=/home/smerx/.local/bin:/home/smerx/anaconda3/bin:/home/smerx/anaconda3/bin:/home/smerx/anaconda3/bin:/home/smerx/anaconda3/bin:/home/smerx/anaconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
