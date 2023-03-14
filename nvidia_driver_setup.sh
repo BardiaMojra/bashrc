@@ -34,6 +34,15 @@ sudo add-apt-repository ppa:graphics-drivers/ppa --yes
 sudo update-initramfs -u
 sudo ubuntu-drivers devices
 sudo ubuntu-drivers autoinstall
+
+echo "read comments"
+pause
+# if auto install fails, try the following,
+# sudo apt install nvidia-driver-525
+# sudo apt install --fix-broken
+# sudo dpkg --configure -a
+# sudo apt install --fix-broken
+
 sudo apt update
 
 echo '' && echo ''
