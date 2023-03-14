@@ -11,15 +11,11 @@ fi
 sudo apt clean && sudo apt update && sudo apt upgrade -y
 # xhost +SI:localuser:root
 
-echo ' ' && echo ' '
-echo '--->> install refind..'
-echo ' ' && echo ' '
+echo ' ' && echo ' ' && echo '--->> install refind..' && echo ' ' && echo ' '
 echo '--->> download latest refind .deb file:'
-echo ' ' && echo ' '
-echo '--->> https://sourceforge.net/projects/refind/files/'
-echo ' ' && echo ' '
+echo '--->> https://sourceforge.net/projects/refind/files/' && echo ' ' && echo ' '
+wget -P ~/Downloads/ https://sourceforge.net/projects/refind/files/0.14.0.2/refind_0.14.0.2-1_amd64.deb
 pause
-echo ' ' && echo ' '
 sudo -u root -H -s dpkg -i ../../Downloads/refind*.deb
 sudo -u root -H -s apt install thunar -y
 echo '--->> in thunar...' && echo ' ' && echo ' '
