@@ -12,32 +12,31 @@ fi
 
 sudo apt clean && sudo apt update && sudo apt upgrade -y
 
-echo '--->> setting up latest nvidia driver... '
+echo '' && echo '' && echo '--->> setting up latest nvidia driver...' && echo '' && echo ''
 
-echo '--->> remove nvidia driver and packages... '
+echo '' && echo '' && echo '--->> remove nvidia driver and packages...' && echo '' && echo ''
 sudo apt-get --purge remove "*cuda*" "*cublas*" "*cufft*" "*cufile*" "*curand*" \
  "*cusolver*" "*cusparse*" "*gds-tools*" "*npp*" "*nvjpeg*" "nsight*" "*nvvm*"
-sudo apt-get --purge remove "*nvidia*" "libxnvctrl*"
-sudo apt-get autoremove
+sudo apt-get --purge remove "*nvidia*" "libxnvctrl*" -y
+sudo apt clean && sudo apt-get autoremove -y
 
-echo '--->> blacklist XServer nouveau driver... '
+echo '' && echo '' && echo '--->> blacklist XServer nouveau driver...' && echo '' && echo ''
 sudo apt-get purge xserver-xorg-video-intel
 sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
 sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
 
-echo '---->>> Confirm the new modprobe config file...'
-cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+echo '' && echo '' && echo '---->>> Confirm the new modprobe config file...'
 echo '---->>> blacklist nouveau'
-echo '---->>> options nouveau modeset=0'
-
-sudo apt autoremove
-
+echo '---->>> options nouveau modeset=0' && echo '' && echo ''
+cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+sudo apt autoremove -y
+sudo add-apt-repository ppa:graphics-drivers/ppa --yes
 sudo update-initramfs -u
-
 sudo ubuntu-drivers devices
 sudo ubuntu-drivers autoinstall
+sudo apt update
 
-echo ' '
+echo '' && echo ''
 echo ' ---->>> now set PRIME mode to performance'
 echo '    \--->>> run nvidia-settings '
 echo '    \--->>> set PRIME mode to Performance '
