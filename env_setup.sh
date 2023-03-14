@@ -20,7 +20,7 @@ sudo apt clean && sudo apt update && apt upgrade -y
 # Note the required -H to define $HOME as root`s home dir.
 #sudo -u root -H -s eval 'echo $SHELL - $USER - $HOME - $PWD'
 
-sudo -u root -H -s bash refind_setup.sh
+#sudo -u root -H -s bash refind_setup.sh
 sudo -u root -H -s bash basics_setup.sh
 sudo -u root -H -s bash git_setup.sh
 sudo -u root -H -s msfonts_setup.sh
