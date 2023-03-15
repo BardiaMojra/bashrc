@@ -11,6 +11,7 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+USR_='smerx'
 
 echo ' ' && echo ' ' && echo '--->> setting up Solaar... ' && echo ' ' && echo ' '
 # xhost +SI:localuser:rootpause
@@ -20,7 +21,7 @@ python3-gi gir1.2-gtk-3.0 python3-dev gir1.2-notify-0.7 \
 gir1.2-ayatanaappindicator3-0.1 gir1.2-ayatanaappindicator3-0.1 \
 gir1.2-appindicator3-0.1 -y
 
-sudo add-apt-repository ppa:solaar-unifying/stable
+sudo add-apt-repository ppa:solaar-unifying/stable -y
 sudo apt-get update
 
 sudo apt install solaar -y
@@ -28,10 +29,12 @@ sudo apt install solaar -y
 sudo cp 42-logitech-unify-permissions.rules /etc/udev/rules.d
 sudo udevadm control --reload-rules # reload udev rules
 
-echo ' ' && echo ' '
-echo '--->> add solaar to startup applications... '
-echo '--->> Name: Solaar'
-echo '--->> Command: solaar'
+sudo cp solaar.desktop /home/$USR_/solaar.desktop
+echo ' ' && echo ' ' && echo '--->> check ~/solaar.desktop:'
+echo "/home/$USR_/solaar.desktop"
+cat /home/$USR_/solaar.desktop
+# echo '--->> Name: Solaar'
+# echo '--->> Command: solaar'
 echo ' ' && echo ' '
 pause
 
