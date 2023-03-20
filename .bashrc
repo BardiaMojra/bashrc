@@ -406,7 +406,7 @@ alias swsdlo='source /opt/ros/humble/setup.bash && dlo_ws/install/local_setup.ba
 
 # ----------------------------------------------------- conda+pip TensorFlow-GPU
 # @link https://www.tensorflow.org/install/pip
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
 
 #conda install -c conda-forge cudatoolkit=11.2.2 cudnn=8.1.0
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
