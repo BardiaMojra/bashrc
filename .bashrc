@@ -230,7 +230,9 @@ alias gitclean_dry-run='git clean -fXn  .'
 alias gitclean='git clean -fX  .'
 alias gitlog='git log --oneline --graph' # show git log compact
 alias gitreset='git reset --mixed HEAD~1'  # undo the last commit and keep changes then git pull, git add [staged file], gitexpress
-alias gitresconflict="git reset --mixed HEAD~1 && git add . && git pull && git commit -m 'Updated with gitexpress on $(date +%F).' && git push"
+alias gitresconflict="git reset --mixed HEAD~1 && git add . && \
+  git pull && git commit -m 'Resolved branch heads conflict with gitresconflict on $(date +%F).' &&\
+  git push"
 
 # git log --oneline --graph     # really cool <<<----------
 # git reset --mixed HEAD~1  # undo the last commit and keep changes
