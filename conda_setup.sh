@@ -14,6 +14,9 @@ function pause(){ # pause function
 
 sudo apt clean && sudo apt update && sudo apt upgrade -y
 
+# install dependencies
+sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+
 echo ' ' && echo ' ' && echo ' \---->>> installing latest conda...' && echo ' ' && echo ' '
 pause
 #install latest Conda
@@ -25,7 +28,7 @@ echo ' ' && echo ' '
 echo ' \---->>> run:'
 echo ' bash conda3.sh && rm conda3.sh'
 echo ' ' && echo ' '
-pause
+# pause
 # bash conda3.sh
 # rm conda3.sh
 
