@@ -23,7 +23,7 @@ sudo apt clean && sudo apt update && apt upgrade -y
 #sudo -u root -H -s bash refind_setup.sh
 sudo -u root -H -s bash basics_setup.sh
 sudo -u root -H -s bash git_setup.sh
-sudo -u root -H -s msfonts_setup.sh
+sudo -u root -H -s bash msfonts_setup.sh
 sudo -u root -H -s bash shell_ext_setup.sh
 sudo -u root -H -s bash vscode_setup.sh
 sudo -u root -H -s bash gnome_software_setup.sh
