@@ -21,7 +21,7 @@ sudo apt-get --purge remove "*nvidia*" "libxnvctrl*" -y
 sudo apt clean && sudo apt-get autoremove -y
 
 echo '' && echo '' && echo '--->> blacklist XServer nouveau driver...' && echo '' && echo ''
-sudo apt-get purge xserver-xorg-video-intel
+sudo apt-get purge xserver-xorg-video-intel -y
 sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
 sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
 
